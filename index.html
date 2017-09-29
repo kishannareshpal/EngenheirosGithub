@@ -1,0 +1,278 @@
+  <!DOCTYPE html>
+  <html lang="pt">
+  <head>
+    <!-- Standard Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Portal dos Engenheiros!">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Engenheiros - DB</title>
+
+
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="icon" sizes="192x192" href="images/android-desktop.png">
+
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Engenheiros">
+    <link rel="apple-touch-icon-precomposed" href="images/ios-desktop.png">
+
+    <!-- Tile icon for Win8 (144x144 + tile color) -->
+    <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
+    <meta name="msapplication-TileColor" content="#3372DF">
+
+    <link rel="shortcut icon" href="images/favicon.png">
+
+    <!-- Site Properties -->
+    <title>Engenheiros - DB</title>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.css"/>
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.teal-red.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.3.2/css/mdb.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/izitoast/1.1.5/css/iziToast.min.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/tippyjs-1.2.1/dist/tippy.css">
+
+
+    <style type="text/css">
+
+      /*html { overflow-y: scroll; }*/
+
+      .hidden.menu {
+        display: none;
+      }
+
+      .masthead.segment {
+        min-height: 1000px;
+        padding: 1em 0em;
+      }
+      .masthead .logo.item img {
+        margin-right: 1em;
+      }
+      .masthead .ui.menu .ui.button {
+        margin-left: 0.5em;
+      }
+
+      /* OLA ENG. TEXT HEADER SIZE AND MARGINS */
+      .masthead h1.ui.header {
+        margin-top: 0em;
+        margin-bottom: 0em;
+        font-size: 64px;
+        font-weight: normal;
+      }
+
+      .masthead h2 {
+        font-size: 1.5em;
+        font-weight: normal;
+      }
+
+      .ui.vertical.stripe {
+        padding: 8em 0em;
+      }
+      .ui.vertical.stripe h3 {
+        font-size: 1em;
+      }
+      .ui.vertical.stripe .button + h3,
+      .ui.vertical.stripe p + h3 {
+        margin-top: 3em;
+      }
+      .ui.vertical.stripe .floated.image {
+        clear: both;
+      }
+      .ui.vertical.stripe p {
+        font-size: 1.33em;
+      }
+      .ui.vertical.stripe .horizontal.divider {
+        margin: 3em 0em;
+      }
+
+      .quote.stripe.segment {
+        padding: 0em;
+      }
+      .quote.stripe.segment .grid .column {
+        padding-top: 5em;
+        padding-bottom: 5em;
+      }
+
+      .footer.segment {
+        padding: 10em 0em;
+      }
+
+      .secondary.pointing.menu .toc.item {
+        display: none;
+      }
+
+      .bg {
+        background-color: black;
+        background: url("../images/bg-n.png") no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+      }
+
+      .centerBlock {
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+      }
+
+      ::selection {
+        background: white; /* WebKit/Blink Browsers */
+      }
+      ::-moz-selection {
+        background: white; /* Gecko Browsers */
+      }
+
+    </style>
+
+
+  </head>
+  <body class="bg">
+
+
+  <!-- Page Contents -->
+  <div class="pusher">
+    <div class="ui vertical masthead center aligned segment">
+
+      <div class="centerBlock btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+        <div class="btn-group mr-2" role="group" aria-label="First group">
+          <!-- IF THE USER ISNT LOGGED IN SHOW THIS BUTTON -->
+          <a id="authenticate" href="login.html" class="btn btn-default">Autenticar <i class="fa fa-key ml-1"></i></a>
+          <!-- IF THE USER is LOGGED IN SHOW THIS BUTTON -->
+          <div id="authenticated" class="hidden btn-group">
+            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Autenticado</button>
+            <div class="dropdown-menu">
+                <h6 id="emailFromSignOut" class="dropdown-header">-</h6>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item hoverable" href="login.html#recoverForm"><i class="icon key"></i> Mudar a senha</a>
+                <a id="signOutFromIndex" class="dropdown-item hoverable" href="#logOut"><i class="sign out icon"></i> Terminar Sessão</a>
+            </div>
+          </div>
+        <div class="btn-group mr-2" role="group" aria-label="Second group">
+          <!-- Quick Upload button -->
+          <a href="upload.html" id="uploadd" class="disabled btn btn-mdb">Upload</a>
+        </div>
+      </div>
+
+
+
+      <div class="ui text container">
+        <img draggable="false" class="centerBlock" src="../images/android-desktop.png" style="height: 150px; width: 150px; margin-top: 5em" alt="logo.png">
+        <h1 class="ui inverted header" style="100%">
+          <strong id="tt1" title="Este é o nosso portal!" style="cursor: default">Ola Eng.</strong>
+        </h1>
+        <h2 class="mdl-color-text--grey-400" style="margin-bottom: 0.5px; cursor: default">Seja bem vindo(a)</h2>
+        <p class="mdl-color-text--grey-600" style="cursor: default">*Por favor Seleccione a cadeira para continuar.</p>
+        <div class="ui inverted segment">
+
+
+      <div class="mdl-grid mdl-color--white mdl-shadow-6dp">
+        <div class="mdl-layout-spacer"></div>
+        <div id="pagee2" class="mdl-layout__content hidden">
+          <div class="middler">
+            <h4 class="mdl-color-text-grey--500">Por favor <strong>autentique-se</strong> paas.</h4>
+          </div>
+        </div>
+        <div id="disciplinasDiv" class="mdl-cell mdl-cell--12-col">
+          <a href="algebra.html" class="mdl-button mdl-js-button mdl-button--accent">
+            <i class="material-icons">border_clear</i>Álgebra L.
+          </a>
+          <a href="fisica2.html" class="mdl-button mdl-js-button mdl-button--accent">
+            <i class="material-icons">lightbulb_outline</i>Física 2
+          </a>
+          <a href="geometria.html" class="mdl-button mdl-js-button mdl-button--accent">
+            <i class="material-icons">border_color</i>Geometria D.
+          </a>
+          <a href="higiene.html" class="mdl-button mdl-js-button mdl-button--accent">
+            <i class="material-icons">airline_seat_recline_extra</i>Higiene e S. no Trabalho
+          </a>
+          <a href="ingles.html" class="mdl-button mdl-js-button mdl-button--accent">
+            <i class="material-icons">language</i>Inglês
+          </a>
+          <a href="matematica2.html" class="mdl-button mdl-js-button mdl-button--accent">
+            <i class="material-icons">functions</i>A. Matemática 2
+          </a>
+          <a href="praticas.html" class="mdl-button mdl-js-button mdl-button--accent">
+            <i class="material-icons">build</i>P. de Carpintaria e Estaleiro
+          </a>
+          <a href="teologia.html" class="mdl-button mdl-js-button mdl-button--accent">
+            <i class="material-icons">account_balance</i>A. Teológica
+          </a>
+        </div>
+            <div class="mdl-layout-spacer"></div>
+      </div>
+    </div>
+  </div>
+<br>
+
+        <!-- INFO BUTTON -->
+        <a id="tt1" href="info.html" class="mdl-button mdl-js-button mdl-button--fab mdl-color--white mdl-js-ripple-effect">
+          <i class="material-icons mdl-color-text--black">info_outline</i>
+        </a>
+        <p class="mdl-color-text--white">Info</p>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="ui inverted vertical footer segment" style="background-color: #2b2b2b">
+    <div class="ui container">
+      <div class="ui stackable inverted divided equal height stackable grid">
+        <div class="seven wide column">
+          <h4 class="ui inverted header"></h4>
+
+          <p style="text-align: left">
+            <i class="copyright icon"></i>2017. Feito com <i style="font-size: 12px; color: #f25151" class="heart icon"></i>por
+            <strong style="cursor: pointer;" title="Social">Kishan Nareshpal</strong>.
+            <!-- SHOWS THE WEBSITE -->
+            <br>
+            <a href="#home" style="color: #ffffff">www.engenheiros.tk</a>
+            <br>
+            <a href="#?" style="color: #ffffff"><i>v.2.0.1</i></a>
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.js"></script>
+  <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.3.1/firebase.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/izitoast/1.1.5/js/iziToast.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.3.2/js/mdb.min.js"></script>
+  <script src="https://use.fontawesome.com/8666852d21.js"></script>
+
+
+  <script src="/tippyjs-1.2.1/dist/tippy.js"></script>
+  <!-- Custom Script Here -->
+  <!-- <script src="/js/loginCheckIndex.js"></script> -->
+
+<!-- Quick Tooltip -->
+  <script>
+      tippy('#ttUpload', {
+        position: 'top',
+        arrow: true,
+        theme: 'light',
+        size: 'big',
+        inertia: true
+      });
+
+      tippy('#tt1', {
+        position: 'bottom',
+        arrow: true,
+        theme: 'light',
+        size: 'big',
+        inertia: true
+      });
+  </script>
+
+  </body>
+</html>
