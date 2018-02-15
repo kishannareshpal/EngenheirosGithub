@@ -3,15 +3,15 @@
 // });
 
 function seeUpload(){
-  document.getElementById('upp').classList.add("btn-info");
-  document.getElementsByName('teclp')[0].classList.remove("btn-mdb");
-  document.getElementsByName('matematica1')[0].classList.remove("btn-mdb");
-  document.getElementsByName('fisica1')[0].classList.remove("btn-mdb");
-  document.getElementsByName('desenhotecnico')[0].classList.remove("btn-mdb");
-  document.getElementsByName('etica')[0].classList.remove("btn-mdb");
-  document.getElementsByName('filosofia')[0].classList.remove("btn-mdb");
-  document.getElementsByName('infbasica')[0].classList.remove("btn-mdb");
-  document.getElementsByName('meic')[0].classList.remove("btn-mdb");
+  document.getElementById('upp').style.opacity = "1";
+  document.getElementsByName('quimica')[0].style.opacity = ".6";
+  document.getElementsByName('cartotopografia')[0].style.opacity = ".6";
+  document.getElementsByName('desenhoarqui')[0].style.opacity = ".6";
+  document.getElementsByName('electrotec')[0].style.opacity = ".6";
+  document.getElementsByName('mecanicaconst')[0].style.opacity = ".6";
+  document.getElementsByName('mecanicasolos')[0].style.opacity = ".6";
+  document.getElementsByName('estatistica')[0].style.opacity = ".6";
+  document.getElementsByName('estetica')[0].style.opacity = ".6"
 
   document.getElementById('ctable').setAttribute("hidden", "");
   document.getElementById('cupload').removeAttribute("hidden");

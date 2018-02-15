@@ -58,57 +58,57 @@ function listen(e){
 
 
     if(thisName == "estruturas"){
-      document.getElementsByName('estruturas')[0].classList.add("btn-mdb");
-      document.getElementsByName('gestao')[0].classList.remove("btn-mdb");
-      document.getElementsByName('instalacoes')[0].classList.remove("btn-mdb");
-      document.getElementsByName('antropologia')[0].classList.remove("btn-mdb");
-      document.getElementsByName('edificacoes')[0].classList.remove("btn-mdb");
-      document.getElementsByName('betao2')[0].classList.remove("btn-mdb");
-      document.getElementById('upp').classList.remove("btn-info");
+      document.getElementsByName('estruturas')[0].style.opacity="1";
+      document.getElementsByName('gestao')[0].style.opacity=".6";
+      document.getElementsByName('instalacoes')[0].style.opacity=".6";
+      document.getElementsByName('antropologia')[0].style.opacity=".6";
+      document.getElementsByName('edificacoes')[0].style.opacity=".6";
+      document.getElementsByName('betao2')[0].style.opacity=".6";
+      document.getElementById('upp').style.opacity=".6";
 
     } else if (thisName == "gestao") {
-      document.getElementsByName('gestao')[0].classList.add("btn-mdb");
-      document.getElementsByName('estruturas')[0].classList.remove("btn-mdb");
-      document.getElementsByName('instalacoes')[0].classList.remove("btn-mdb");
-      document.getElementsByName('antropologia')[0].classList.remove("btn-mdb");
-      document.getElementsByName('edificacoes')[0].classList.remove("btn-mdb");
-      document.getElementsByName('betao2')[0].classList.remove("btn-mdb");
-      document.getElementById('upp').classList.remove("btn-info");
+      document.getElementsByName('gestao')[0].style.opacity="1";
+      document.getElementsByName('estruturas')[0].style.opacity=".6";
+      document.getElementsByName('instalacoes')[0].style.opacity=".6";
+      document.getElementsByName('antropologia')[0].style.opacity=".6";
+      document.getElementsByName('edificacoes')[0].style.opacity=".6";
+      document.getElementsByName('betao2')[0].style.opacity=".6";
+      document.getElementById('upp').style.opacity=".6";
 
     } else if (thisName == "instalacoes") {
-      document.getElementsByName('instalacoes')[0].classList.add("btn-mdb");
-      document.getElementsByName('estruturas')[0].classList.remove("btn-mdb");
-      document.getElementsByName('gestao')[0].classList.remove("btn-mdb");
-      document.getElementsByName('antropologia')[0].classList.remove("btn-mdb");
-      document.getElementsByName('edificacoes')[0].classList.remove("btn-mdb");
-      document.getElementsByName('betao2')[0].classList.remove("btn-mdb");
-      document.getElementById('upp').classList.remove("btn-info");
+      document.getElementsByName('instalacoes')[0].style.opacity="1";
+      document.getElementsByName('estruturas')[0].style.opacity=".6";
+      document.getElementsByName('gestao')[0].style.opacity=".6";
+      document.getElementsByName('antropologia')[0].style.opacity=".6";
+      document.getElementsByName('edificacoes')[0].style.opacity=".6";
+      document.getElementsByName('betao2')[0].style.opacity=".6";
+      document.getElementById('upp').style.opacity=".6";
 
     } else if (thisName == "antropologia") {
-      document.getElementsByName('antropologia')[0].classList.add("btn-mdb");
-      document.getElementsByName('estruturas')[0].classList.remove("btn-mdb");
-      document.getElementsByName('gestao')[0].classList.remove("btn-mdb");
-      document.getElementsByName('instalacoes')[0].classList.remove("btn-mdb");
-      document.getElementsByName('edificacoes')[0].classList.remove("btn-mdb");
-      document.getElementsByName('betao2')[0].classList.remove("btn-mdb");
-      document.getElementById('upp').classList.remove("btn-info");
+      document.getElementsByName('antropologia')[0].style.opacity="1";
+      document.getElementsByName('estruturas')[0].style.opacity=".6";
+      document.getElementsByName('gestao')[0].style.opacity=".6";
+      document.getElementsByName('instalacoes')[0].style.opacity=".6";
+      document.getElementsByName('edificacoes')[0].style.opacity=".6";
+      document.getElementsByName('betao2')[0].style.opacity=".6";
+      document.getElementById('upp').style.opacity=".6";
 
     } else if (thisName == "edificacoes") {
-      document.getElementsByName('edificacoes')[0].classList.add("btn-mdb");
-      document.getElementsByName('estruturas')[0].classList.remove("btn-mdb");
-      document.getElementsByName('gestao')[0].classList.remove("btn-mdb");
-      document.getElementsByName('instalacoes')[0].classList.remove("btn-mdb");
-      document.getElementsByName('antropologia')[0].classList.remove("btn-mdb");
-      document.getElementsByName('betao2')[0].classList.remove("btn-mdb");
-      document.getElementById('upp').classList.remove("btn-info");
+      document.getElementsByName('edificacoes')[0].style.opacity="1";
+      document.getElementsByName('estruturas')[0].style.opacity=".6";
+      document.getElementsByName('gestao')[0].style.opacity=".6";
+      document.getElementsByName('instalacoes')[0].style.opacity=".6";
+      document.getElementsByName('antropologia')[0].style.opacity=".6";
+      document.getElementsByName('betao2')[0].style.opacity=".6";
+      document.getElementById('upp').style.opacity=".6";
 
     } else if (thisName == "betao2") {
-      document.getElementsByName('betao2')[0].classList.add("btn-mdb");
-      document.getElementsByName('estruturas')[0].classList.remove("btn-mdb");
-      document.getElementsByName('gestao')[0].classList.remove("btn-mdb");
-      document.getElementsByName('instalacoes')[0].classList.remove("btn-mdb");
-      document.getElementsByName('antropologia')[0].classList.remove("btn-mdb");
-      document.getElementsByName('edificacoes')[0].classList.remove("btn-mdb");
-      document.getElementById('upp').classList.remove("btn-info");
+      document.getElementsByName('betao2')[0].style.opacity="1";
+      document.getElementsByName('estruturas')[0].style.opacity=".6";
+      document.getElementsByName('gestao')[0].style.opacity=".6";
+      document.getElementsByName('instalacoes')[0].style.opacity=".6";
+      document.getElementsByName('antropologia')[0].style.opacity=".6";
+      document.getElementsByName('edificacoes')[0].style.opacity=".6";
+      document.getElementById('upp').style.opacity=".6";
     }
 }

@@ -3,14 +3,14 @@
 // });
 
 function seeUpload(){
-  document.getElementById('upp').classList.add("btn-info");
-  document.getElementsByName('hidrgeral')[0].classList.remove("btn-mdb");
-  document.getElementsByName('hidrgeral2')[0].classList.remove("btn-mdb");
-  document.getElementsByName('planeamento')[0].classList.remove("btn-mdb");
-  document.getElementsByName('ptc')[0].classList.remove("btn-mdb");
-  document.getElementsByName('redes')[0].classList.remove("btn-mdb");
-  document.getElementsByName('teoria')[0].classList.remove("btn-mdb");
-  document.getElementsByName('edpaz')[0].classList.remove("btn-mdb");
+  document.getElementById('upp').style.opacity="1";
+  document.getElementsByName('hidrgeral')[0].style.opacity=".6";
+  document.getElementsByName('hidrgeral2')[0].style.opacity=".6";
+  document.getElementsByName('planeamento')[0].style.opacity=".6";
+  document.getElementsByName('ptc')[0].style.opacity=".6";
+  document.getElementsByName('redes')[0].style.opacity=".6";
+  document.getElementsByName('teoria')[0].style.opacity=".6";
+  document.getElementsByName('edpaz')[0].style.opacity=".6";
 
   document.getElementById('ctable').setAttribute("hidden", "");
   document.getElementById('cupload').removeAttribute("hidden");

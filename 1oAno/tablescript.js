@@ -58,91 +58,91 @@ function listen(e){
 
 
     if(thisName == "matematica1"){
-      document.getElementsByName('matematica1')[0].classList.add("btn-mdb");
-      document.getElementsByName('desenhotecnico')[0].classList.remove("btn-mdb");
-      document.getElementsByName('etica')[0].classList.remove("btn-mdb");
-      document.getElementsByName('filosofia')[0].classList.remove("btn-mdb");
-      document.getElementsByName('infbasica')[0].classList.remove("btn-mdb");
-      document.getElementsByName('meic')[0].classList.remove("btn-mdb");
-      document.getElementsByName('teclp')[0].classList.remove("btn-mdb");
-      document.getElementsByName('fisica1')[0].classList.remove("btn-mdb")
-      document.getElementById('upp').classList.remove("btn-info");
+      document.getElementsByName('matematica1')[0].style.opacity="1";
+      document.getElementsByName('desenhotecnico')[0].style.opacity=".6";
+      document.getElementsByName('etica')[0].style.opacity=".6";
+      document.getElementsByName('filosofia')[0].style.opacity=".6";
+      document.getElementsByName('infbasica')[0].style.opacity=".6";
+      document.getElementsByName('meic')[0].style.opacity=".6";
+      document.getElementsByName('teclp')[0].style.opacity=".6";
+      document.getElementsByName('fisica1')[0].style.opacity=".6"
+      document.getElementById('upp').style.opacity=".6";
 
     } else if (thisName == "desenhotecnico") {
-      document.getElementsByName('desenhotecnico')[0].classList.add("btn-mdb");
-      document.getElementsByName('matematica1')[0].classList.remove("btn-mdb");
-      document.getElementsByName('etica')[0].classList.remove("btn-mdb");
-      document.getElementsByName('filosofia')[0].classList.remove("btn-mdb");
-      document.getElementsByName('infbasica')[0].classList.remove("btn-mdb");
-      document.getElementsByName('meic')[0].classList.remove("btn-mdb");
-      document.getElementsByName('teclp')[0].classList.remove("btn-mdb");
-      document.getElementsByName('fisica1')[0].classList.remove("btn-mdb")
-      document.getElementById('upp').classList.remove("btn-info");
+      document.getElementsByName('desenhotecnico')[0].style.opacity="1";
+      document.getElementsByName('matematica1')[0].style.opacity=".6";
+      document.getElementsByName('etica')[0].style.opacity=".6";
+      document.getElementsByName('filosofia')[0].style.opacity=".6";
+      document.getElementsByName('infbasica')[0].style.opacity=".6";
+      document.getElementsByName('meic')[0].style.opacity=".6";
+      document.getElementsByName('teclp')[0].style.opacity=".6";
+      document.getElementsByName('fisica1')[0].style.opacity=".6"
+      document.getElementById('upp').style.opacity=".6";
 
     } else if (thisName == "etica") {
-      document.getElementsByName('etica')[0].classList.add("btn-mdb");
-      document.getElementsByName('matematica1')[0].classList.remove("btn-mdb");
-      document.getElementsByName('desenhotecnico')[0].classList.remove("btn-mdb");
-      document.getElementsByName('filosofia')[0].classList.remove("btn-mdb");
-      document.getElementsByName('infbasica')[0].classList.remove("btn-mdb");
-      document.getElementsByName('meic')[0].classList.remove("btn-mdb");
-      document.getElementsByName('teclp')[0].classList.remove("btn-mdb");
-      document.getElementsByName('fisica1')[0].classList.remove("btn-mdb")
-      document.getElementById('upp').classList.remove("btn-info");
+      document.getElementsByName('etica')[0].style.opacity="1";
+      document.getElementsByName('matematica1')[0].style.opacity=".6";
+      document.getElementsByName('desenhotecnico')[0].style.opacity=".6";
+      document.getElementsByName('filosofia')[0].style.opacity=".6";
+      document.getElementsByName('infbasica')[0].style.opacity=".6";
+      document.getElementsByName('meic')[0].style.opacity=".6";
+      document.getElementsByName('teclp')[0].style.opacity=".6";
+      document.getElementsByName('fisica1')[0].style.opacity=".6"
+      document.getElementById('upp').style.opacity=".6";
 
     } else if (thisName == "filosofia") {
-      document.getElementsByName('filosofia')[0].classList.add("btn-mdb");
-      document.getElementsByName('matematica1')[0].classList.remove("btn-mdb");
-      document.getElementsByName('desenhotecnico')[0].classList.remove("btn-mdb");
-      document.getElementsByName('etica')[0].classList.remove("btn-mdb");
-      document.getElementsByName('infbasica')[0].classList.remove("btn-mdb");
-      document.getElementsByName('meic')[0].classList.remove("btn-mdb");
-      document.getElementsByName('teclp')[0].classList.remove("btn-mdb");
-      document.getElementsByName('fisica1')[0].classList.remove("btn-mdb")
-      document.getElementById('upp').classList.remove("btn-info");
+      document.getElementsByName('filosofia')[0].style.opacity="1";
+      document.getElementsByName('matematica1')[0].style.opacity=".6";
+      document.getElementsByName('desenhotecnico')[0].style.opacity=".6";
+      document.getElementsByName('etica')[0].style.opacity=".6";
+      document.getElementsByName('infbasica')[0].style.opacity=".6";
+      document.getElementsByName('meic')[0].style.opacity=".6";
+      document.getElementsByName('teclp')[0].style.opacity=".6";
+      document.getElementsByName('fisica1')[0].style.opacity=".6"
+      document.getElementById('upp').style.opacity=".6";
 
     } else if (thisName == "fisica1") {
-      document.getElementsByName('fisica1')[0].classList.add("btn-mdb");
-      document.getElementsByName('matematica1')[0].classList.remove("btn-mdb");
-      document.getElementsByName('teclp')[0].classList.remove("btn-mdb");
-      document.getElementsByName('desenhotecnico')[0].classList.remove("btn-mdb");
-      document.getElementsByName('etica')[0].classList.remove("btn-mdb");
-      document.getElementsByName('filosofia')[0].classList.remove("btn-mdb");
-      document.getElementsByName('infbasica')[0].classList.remove("btn-mdb");
-      document.getElementsByName('meic')[0].classList.remove("btn-mdb");
-      document.getElementById('upp').classList.remove("btn-info");
+      document.getElementsByName('fisica1')[0].style.opacity="1";
+      document.getElementsByName('matematica1')[0].style.opacity=".6";
+      document.getElementsByName('teclp')[0].style.opacity=".6";
+      document.getElementsByName('desenhotecnico')[0].style.opacity=".6";
+      document.getElementsByName('etica')[0].style.opacity=".6";
+      document.getElementsByName('filosofia')[0].style.opacity=".6";
+      document.getElementsByName('infbasica')[0].style.opacity=".6";
+      document.getElementsByName('meic')[0].style.opacity=".6";
+      document.getElementById('upp').style.opacity=".6";
 
     } else if (thisName == "infbasica") {
-      document.getElementsByName('infbasica')[0].classList.add("btn-mdb");
-      document.getElementsByName('matematica1')[0].classList.remove("btn-mdb");
-      document.getElementsByName('desenhotecnico')[0].classList.remove("btn-mdb");
-      document.getElementsByName('etica')[0].classList.remove("btn-mdb");
-      document.getElementsByName('filosofia')[0].classList.remove("btn-mdb");
-      document.getElementsByName('meic')[0].classList.remove("btn-mdb");
-      document.getElementsByName('teclp')[0].classList.remove("btn-mdb");
-      document.getElementsByName('fisica1')[0].classList.remove("btn-mdb")
-      document.getElementById('upp').classList.remove("btn-info");
+      document.getElementsByName('infbasica')[0].style.opacity="1";
+      document.getElementsByName('matematica1')[0].style.opacity=".6";
+      document.getElementsByName('desenhotecnico')[0].style.opacity=".6";
+      document.getElementsByName('etica')[0].style.opacity=".6";
+      document.getElementsByName('filosofia')[0].style.opacity=".6";
+      document.getElementsByName('meic')[0].style.opacity=".6";
+      document.getElementsByName('teclp')[0].style.opacity=".6";
+      document.getElementsByName('fisica1')[0].style.opacity=".6"
+      document.getElementById('upp').style.opacity=".6";
 
     } else if (thisName == "meic") {
-      document.getElementsByName('meic')[0].classList.add("btn-mdb");
-      document.getElementsByName('matematica1')[0].classList.remove("btn-mdb");
-      document.getElementsByName('desenhotecnico')[0].classList.remove("btn-mdb");
-      document.getElementsByName('etica')[0].classList.remove("btn-mdb");
-      document.getElementsByName('filosofia')[0].classList.remove("btn-mdb");
-      document.getElementsByName('infbasica')[0].classList.remove("btn-mdb");
-      document.getElementsByName('teclp')[0].classList.remove("btn-mdb");
-      document.getElementsByName('fisica1')[0].classList.remove("btn-mdb")
-      document.getElementById('upp').classList.remove("btn-info");
+      document.getElementsByName('meic')[0].style.opacity="1";
+      document.getElementsByName('matematica1')[0].style.opacity=".6";
+      document.getElementsByName('desenhotecnico')[0].style.opacity=".6";
+      document.getElementsByName('etica')[0].style.opacity=".6";
+      document.getElementsByName('filosofia')[0].style.opacity=".6";
+      document.getElementsByName('infbasica')[0].style.opacity=".6";
+      document.getElementsByName('teclp')[0].style.opacity=".6";
+      document.getElementsByName('fisica1')[0].style.opacity=".6"
+      document.getElementById('upp').style.opacity=".6";
 
     } else if (thisName == "teclp") {
-      document.getElementsByName('teclp')[0].classList.add("btn-mdb");
-      document.getElementsByName('matematica1')[0].classList.remove("btn-mdb");
-      document.getElementsByName('fisica1')[0].classList.remove("btn-mdb");
-      document.getElementsByName('desenhotecnico')[0].classList.remove("btn-mdb");
-      document.getElementsByName('etica')[0].classList.remove("btn-mdb");
-      document.getElementsByName('filosofia')[0].classList.remove("btn-mdb");
-      document.getElementsByName('infbasica')[0].classList.remove("btn-mdb");
-      document.getElementsByName('meic')[0].classList.remove("btn-mdb");
-      document.getElementById('upp').classList.remove("btn-info");
+      document.getElementsByName('teclp')[0].style.opacity="1";
+      document.getElementsByName('matematica1')[0].style.opacity=".6";
+      document.getElementsByName('fisica1')[0].style.opacity=".6";
+      document.getElementsByName('desenhotecnico')[0].style.opacity=".6";
+      document.getElementsByName('etica')[0].style.opacity=".6";
+      document.getElementsByName('filosofia')[0].style.opacity=".6";
+      document.getElementsByName('infbasica')[0].style.opacity=".6";
+      document.getElementsByName('meic')[0].style.opacity=".6";
+      document.getElementById('upp').style.opacity=".6";
     }
 }

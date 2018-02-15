@@ -58,73 +58,73 @@ function listen(e){
 
 
     if(thisName == "hidrgeral"){
-      document.getElementsByName('hidrgeral')[0].classList.add("btn-mdb");
-      document.getElementsByName('hidrgeral2')[0].classList.remove("btn-mdb");
-      document.getElementsByName('planeamento')[0].classList.remove("btn-mdb");
-      document.getElementsByName('ptc')[0].classList.remove("btn-mdb");
-      document.getElementsByName('redes')[0].classList.remove("btn-mdb");
-      document.getElementsByName('teoria')[0].classList.remove("btn-mdb");
-      document.getElementsByName('edpaz')[0].classList.remove("btn-mdb");
-      document.getElementById('upp').classList.remove("btn-info");
+      document.getElementsByName('hidrgeral')[0].style.opacity="1";
+      document.getElementsByName('hidrgeral2')[0].style.opacity=".6";
+      document.getElementsByName('planeamento')[0].style.opacity=".6";
+      document.getElementsByName('ptc')[0].style.opacity=".6";
+      document.getElementsByName('redes')[0].style.opacity=".6";
+      document.getElementsByName('teoria')[0].style.opacity=".6";
+      document.getElementsByName('edpaz')[0].style.opacity=".6";
+      document.getElementById('upp').style.opacity=".6";
 
     } else if (thisName == "hidrgeral2") {
-      document.getElementsByName('hidrgeral2')[0].classList.add("btn-mdb");
-      document.getElementsByName('hidrgeral')[0].classList.remove("btn-mdb");
-      document.getElementsByName('planeamento')[0].classList.remove("btn-mdb");
-      document.getElementsByName('ptc')[0].classList.remove("btn-mdb");
-      document.getElementsByName('redes')[0].classList.remove("btn-mdb");
-      document.getElementsByName('teoria')[0].classList.remove("btn-mdb");
-      document.getElementsByName('edpaz')[0].classList.remove("btn-mdb");
-      document.getElementById('upp').classList.remove("btn-info");
+      document.getElementsByName('hidrgeral2')[0].style.opacity="1";
+      document.getElementsByName('hidrgeral')[0].style.opacity=".6";
+      document.getElementsByName('planeamento')[0].style.opacity=".6";
+      document.getElementsByName('ptc')[0].style.opacity=".6";
+      document.getElementsByName('redes')[0].style.opacity=".6";
+      document.getElementsByName('teoria')[0].style.opacity=".6";
+      document.getElementsByName('edpaz')[0].style.opacity=".6";
+      document.getElementById('upp').style.opacity=".6";
 
     } else if (thisName == "planeamento") {
-      document.getElementsByName('planeamento')[0].classList.add("btn-mdb");
-      document.getElementsByName('hidrgeral')[0].classList.remove("btn-mdb");
-      document.getElementsByName('hidrgeral2')[0].classList.remove("btn-mdb");
-      document.getElementsByName('ptc')[0].classList.remove("btn-mdb");
-      document.getElementsByName('redes')[0].classList.remove("btn-mdb");
-      document.getElementsByName('teoria')[0].classList.remove("btn-mdb");
-      document.getElementsByName('edpaz')[0].classList.remove("btn-mdb");
-      document.getElementById('upp').classList.remove("btn-info");
+      document.getElementsByName('planeamento')[0].style.opacity="1";
+      document.getElementsByName('hidrgeral')[0].style.opacity=".6";
+      document.getElementsByName('hidrgeral2')[0].style.opacity=".6";
+      document.getElementsByName('ptc')[0].style.opacity=".6";
+      document.getElementsByName('redes')[0].style.opacity=".6";
+      document.getElementsByName('teoria')[0].style.opacity=".6";
+      document.getElementsByName('edpaz')[0].style.opacity=".6";
+      document.getElementById('upp').style.opacity=".6";
 
     } else if (thisName == "ptc") {
-      document.getElementsByName('ptc')[0].classList.add("btn-mdb");
-      document.getElementsByName('hidrgeral')[0].classList.remove("btn-mdb");
-      document.getElementsByName('hidrgeral2')[0].classList.remove("btn-mdb");
-      document.getElementsByName('planeamento')[0].classList.remove("btn-mdb");
-      document.getElementsByName('redes')[0].classList.remove("btn-mdb");
-      document.getElementsByName('teoria')[0].classList.remove("btn-mdb");
-      document.getElementsByName('edpaz')[0].classList.remove("btn-mdb");
-      document.getElementById('upp').classList.remove("btn-info");
+      document.getElementsByName('ptc')[0].style.opacity="1";
+      document.getElementsByName('hidrgeral')[0].style.opacity=".6";
+      document.getElementsByName('hidrgeral2')[0].style.opacity=".6";
+      document.getElementsByName('planeamento')[0].style.opacity=".6";
+      document.getElementsByName('redes')[0].style.opacity=".6";
+      document.getElementsByName('teoria')[0].style.opacity=".6";
+      document.getElementsByName('edpaz')[0].style.opacity=".6";
+      document.getElementById('upp').style.opacity=".6";
 
     } else if (thisName == "redes") {
-      document.getElementsByName('redes')[0].classList.add("btn-mdb");
-      document.getElementsByName('hidrgeral')[0].classList.remove("btn-mdb");
-      document.getElementsByName('hidrgeral2')[0].classList.remove("btn-mdb");
-      document.getElementsByName('planeamento')[0].classList.remove("btn-mdb");
-      document.getElementsByName('ptc')[0].classList.remove("btn-mdb");
-      document.getElementsByName('teoria')[0].classList.remove("btn-mdb");
-      document.getElementsByName('edpaz')[0].classList.remove("btn-mdb");
-      document.getElementById('upp').classList.remove("btn-info");
+      document.getElementsByName('redes')[0].style.opacity="1";
+      document.getElementsByName('hidrgeral')[0].style.opacity=".6";
+      document.getElementsByName('hidrgeral2')[0].style.opacity=".6";
+      document.getElementsByName('planeamento')[0].style.opacity=".6";
+      document.getElementsByName('ptc')[0].style.opacity=".6";
+      document.getElementsByName('teoria')[0].style.opacity=".6";
+      document.getElementsByName('edpaz')[0].style.opacity=".6";
+      document.getElementById('upp').style.opacity=".6";
 
     } else if (thisName == "teoria") {
-      document.getElementsByName('teoria')[0].classList.add("btn-mdb");
-      document.getElementsByName('hidrgeral')[0].classList.remove("btn-mdb");
-      document.getElementsByName('hidrgeral2')[0].classList.remove("btn-mdb");
-      document.getElementsByName('planeamento')[0].classList.remove("btn-mdb");
-      document.getElementsByName('ptc')[0].classList.remove("btn-mdb");
-      document.getElementsByName('redes')[0].classList.remove("btn-mdb");
-      document.getElementsByName('edpaz')[0].classList.remove("btn-mdb");
-      document.getElementById('upp').classList.remove("btn-info");
+      document.getElementsByName('teoria')[0].style.opacity="1";
+      document.getElementsByName('hidrgeral')[0].style.opacity=".6";
+      document.getElementsByName('hidrgeral2')[0].style.opacity=".6";
+      document.getElementsByName('planeamento')[0].style.opacity=".6";
+      document.getElementsByName('ptc')[0].style.opacity=".6";
+      document.getElementsByName('redes')[0].style.opacity=".6";
+      document.getElementsByName('edpaz')[0].style.opacity=".6";
+      document.getElementById('upp').style.opacity=".6";
 
     } else if (thisName == "edpaz") {
-      document.getElementsByName('edpaz')[0].classList.add("btn-mdb");
-      document.getElementsByName('hidrgeral')[0].classList.remove("btn-mdb");
-      document.getElementsByName('hidrgeral2')[0].classList.remove("btn-mdb");
-      document.getElementsByName('planeamento')[0].classList.remove("btn-mdb");
-      document.getElementsByName('ptc')[0].classList.remove("btn-mdb");
-      document.getElementsByName('redes')[0].classList.remove("btn-mdb");
-      document.getElementsByName('teoria')[0].classList.remove("btn-mdb");
-      document.getElementById('upp').classList.remove("btn-info");
+      document.getElementsByName('edpaz')[0].style.opacity="1";
+      document.getElementsByName('hidrgeral')[0].style.opacity=".6";
+      document.getElementsByName('hidrgeral2')[0].style.opacity=".6";
+      document.getElementsByName('planeamento')[0].style.opacity=".6";
+      document.getElementsByName('ptc')[0].style.opacity=".6";
+      document.getElementsByName('redes')[0].style.opacity=".6";
+      document.getElementsByName('teoria')[0].style.opacity=".6";
+      document.getElementById('upp').style.opacity=".6";
     }
 }

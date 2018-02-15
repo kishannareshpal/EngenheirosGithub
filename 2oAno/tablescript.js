@@ -58,91 +58,91 @@ function listen(e){
 
 
     if(thisName == "cartotopografia"){
-      document.getElementsByName('cartotopografia')[0].classList.add("btn-mdb");
-      document.getElementsByName('desenhoarqui')[0].classList.remove("btn-mdb");
-      document.getElementsByName('electrotec')[0].classList.remove("btn-mdb");
-      document.getElementsByName('mecanicaconst')[0].classList.remove("btn-mdb");
-      document.getElementsByName('mecanicasolos')[0].classList.remove("btn-mdb");
-      document.getElementsByName('estatistica')[0].classList.remove("btn-mdb");
-      document.getElementsByName('quimica')[0].classList.remove("btn-mdb");
-      document.getElementsByName('estetica')[0].classList.remove("btn-mdb")
-      document.getElementById('upp').classList.remove("btn-info");
+      document.getElementsByName('cartotopografia')[0].style.opacity = "1";
+      document.getElementsByName('desenhoarqui')[0].style.opacity = ".6";
+      document.getElementsByName('electrotec')[0].style.opacity = ".6";
+      document.getElementsByName('mecanicaconst')[0].style.opacity = ".6";
+      document.getElementsByName('mecanicasolos')[0].style.opacity = ".6";
+      document.getElementsByName('estatistica')[0].style.opacity = ".6";
+      document.getElementsByName('quimica')[0].style.opacity = ".6";
+      document.getElementsByName('estetica')[0].style.opacity = ".6";
+      document.getElementById('upp').style.opacity = ".6";
 
     } else if (thisName == "desenhoarqui") {
-      document.getElementsByName('desenhoarqui')[0].classList.add("btn-mdb");
-      document.getElementsByName('cartotopografia')[0].classList.remove("btn-mdb");
-      document.getElementsByName('electrotec')[0].classList.remove("btn-mdb");
-      document.getElementsByName('mecanicaconst')[0].classList.remove("btn-mdb");
-      document.getElementsByName('mecanicasolos')[0].classList.remove("btn-mdb");
-      document.getElementsByName('estatistica')[0].classList.remove("btn-mdb");
-      document.getElementsByName('quimica')[0].classList.remove("btn-mdb");
-      document.getElementsByName('estetica')[0].classList.remove("btn-mdb")
-      document.getElementById('upp').classList.remove("btn-info");
+      document.getElementsByName('desenhoarqui')[0].style.opacity = "1";
+      document.getElementsByName('cartotopografia')[0].style.opacity = ".6";
+      document.getElementsByName('electrotec')[0].style.opacity = ".6";
+      document.getElementsByName('mecanicaconst')[0].style.opacity = ".6";
+      document.getElementsByName('mecanicasolos')[0].style.opacity = ".6";
+      document.getElementsByName('estatistica')[0].style.opacity = ".6";
+      document.getElementsByName('quimica')[0].style.opacity = ".6";
+      document.getElementsByName('estetica')[0].style.opacity = ".6"
+      document.getElementById('upp').style.opacity = ".6";
 
     } else if (thisName == "electrotec") {
-      document.getElementsByName('electrotec')[0].classList.add("btn-mdb");
-      document.getElementsByName('cartotopografia')[0].classList.remove("btn-mdb");
-      document.getElementsByName('desenhoarqui')[0].classList.remove("btn-mdb");
-      document.getElementsByName('mecanicaconst')[0].classList.remove("btn-mdb");
-      document.getElementsByName('mecanicasolos')[0].classList.remove("btn-mdb");
-      document.getElementsByName('estatistica')[0].classList.remove("btn-mdb");
-      document.getElementsByName('quimica')[0].classList.remove("btn-mdb");
-      document.getElementsByName('estetica')[0].classList.remove("btn-mdb")
-      document.getElementById('upp').classList.remove("btn-info");
+      document.getElementsByName('electrotec')[0].style.opacity = "1";
+      document.getElementsByName('cartotopografia')[0].style.opacity = ".6";
+      document.getElementsByName('desenhoarqui')[0].style.opacity = ".6";
+      document.getElementsByName('mecanicaconst')[0].style.opacity = ".6";
+      document.getElementsByName('mecanicasolos')[0].style.opacity = ".6";
+      document.getElementsByName('estatistica')[0].style.opacity = ".6";
+      document.getElementsByName('quimica')[0].style.opacity = ".6";
+      document.getElementsByName('estetica')[0].style.opacity = ".6"
+      document.getElementById('upp').style.opacity = ".6";
 
     } else if (thisName == "mecanicaconst") {
-      document.getElementsByName('mecanicaconst')[0].classList.add("btn-mdb");
-      document.getElementsByName('cartotopografia')[0].classList.remove("btn-mdb");
-      document.getElementsByName('desenhoarqui')[0].classList.remove("btn-mdb");
-      document.getElementsByName('electrotec')[0].classList.remove("btn-mdb");
-      document.getElementsByName('mecanicasolos')[0].classList.remove("btn-mdb");
-      document.getElementsByName('estatistica')[0].classList.remove("btn-mdb");
-      document.getElementsByName('quimica')[0].classList.remove("btn-mdb");
-      document.getElementsByName('estetica')[0].classList.remove("btn-mdb")
-      document.getElementById('upp').classList.remove("btn-info");
+      document.getElementsByName('mecanicaconst')[0].style.opacity = "1";
+      document.getElementsByName('cartotopografia')[0].style.opacity = ".6";
+      document.getElementsByName('desenhoarqui')[0].style.opacity = ".6";
+      document.getElementsByName('electrotec')[0].style.opacity = ".6";
+      document.getElementsByName('mecanicasolos')[0].style.opacity = ".6";
+      document.getElementsByName('estatistica')[0].style.opacity = ".6";
+      document.getElementsByName('quimica')[0].style.opacity = ".6";
+      document.getElementsByName('estetica')[0].style.opacity = ".6"
+      document.getElementById('upp').style.opacity = ".6";
 
     } else if (thisName == "mecanicasolos") {
-      document.getElementsByName('mecanicasolos')[0].classList.add("btn-mdb");
-      document.getElementsByName('cartotopografia')[0].classList.remove("btn-mdb");
-      document.getElementsByName('desenhoarqui')[0].classList.remove("btn-mdb");
-      document.getElementsByName('electrotec')[0].classList.remove("btn-mdb");
-      document.getElementsByName('mecanicaconst')[0].classList.remove("btn-mdb");
-      document.getElementsByName('estatistica')[0].classList.remove("btn-mdb");
-      document.getElementsByName('quimica')[0].classList.remove("btn-mdb");
-      document.getElementsByName('estetica')[0].classList.remove("btn-mdb")
-      document.getElementById('upp').classList.remove("btn-info");
+      document.getElementsByName('mecanicasolos')[0].style.opacity = "1";
+      document.getElementsByName('cartotopografia')[0].style.opacity = ".6";
+      document.getElementsByName('desenhoarqui')[0].style.opacity = ".6";
+      document.getElementsByName('electrotec')[0].style.opacity = ".6";
+      document.getElementsByName('mecanicaconst')[0].style.opacity = ".6";
+      document.getElementsByName('estatistica')[0].style.opacity = ".6";
+      document.getElementsByName('quimica')[0].style.opacity = ".6";
+      document.getElementsByName('estetica')[0].style.opacity = ".6"
+      document.getElementById('upp').style.opacity = ".6";
 
     } else if (thisName == "estatistica") {
-      document.getElementsByName('estatistica')[0].classList.add("btn-mdb");
-      document.getElementsByName('cartotopografia')[0].classList.remove("btn-mdb");
-      document.getElementsByName('desenhoarqui')[0].classList.remove("btn-mdb");
-      document.getElementsByName('electrotec')[0].classList.remove("btn-mdb");
-      document.getElementsByName('mecanicaconst')[0].classList.remove("btn-mdb");
-      document.getElementsByName('mecanicasolos')[0].classList.remove("btn-mdb");
-      document.getElementsByName('quimica')[0].classList.remove("btn-mdb");
-      document.getElementsByName('estetica')[0].classList.remove("btn-mdb")
-      document.getElementById('upp').classList.remove("btn-info");
+      document.getElementsByName('estatistica')[0].style.opacity = "1";
+      document.getElementsByName('cartotopografia')[0].style.opacity = ".6";
+      document.getElementsByName('desenhoarqui')[0].style.opacity = ".6";
+      document.getElementsByName('electrotec')[0].style.opacity = ".6";
+      document.getElementsByName('mecanicaconst')[0].style.opacity = ".6";
+      document.getElementsByName('mecanicasolos')[0].style.opacity = ".6";
+      document.getElementsByName('quimica')[0].style.opacity = ".6";
+      document.getElementsByName('estetica')[0].style.opacity = ".6"
+      document.getElementById('upp').style.opacity = ".6";
 
     } else if (thisName == "quimica") {
-      document.getElementsByName('quimica')[0].classList.add("btn-mdb");
-      document.getElementsByName('cartotopografia')[0].classList.remove("btn-mdb");
-      document.getElementsByName('desenhoarqui')[0].classList.remove("btn-mdb");
-      document.getElementsByName('electrotec')[0].classList.remove("btn-mdb");
-      document.getElementsByName('mecanicaconst')[0].classList.remove("btn-mdb");
-      document.getElementsByName('mecanicasolos')[0].classList.remove("btn-mdb");
-      document.getElementsByName('estatistica')[0].classList.remove("btn-mdb");
-      document.getElementsByName('estetica')[0].classList.remove("btn-mdb")
-      document.getElementById('upp').classList.remove("btn-info");
+      document.getElementsByName('quimica')[0].style.opacity = "1";
+      document.getElementsByName('cartotopografia')[0].style.opacity = ".6";
+      document.getElementsByName('desenhoarqui')[0].style.opacity = ".6";
+      document.getElementsByName('electrotec')[0].style.opacity = ".6";
+      document.getElementsByName('mecanicaconst')[0].style.opacity = ".6";
+      document.getElementsByName('mecanicasolos')[0].style.opacity = ".6";
+      document.getElementsByName('estatistica')[0].style.opacity = ".6";
+      document.getElementsByName('estetica')[0].style.opacity = ".6"
+      document.getElementById('upp').style.opacity = ".6";
 
     } else if (thisName == "estetica") {
-      document.getElementsByName('estetica')[0].classList.add("btn-mdb");
-      document.getElementsByName('cartotopografia')[0].classList.remove("btn-mdb");
-      document.getElementsByName('desenhoarqui')[0].classList.remove("btn-mdb");
-      document.getElementsByName('electrotec')[0].classList.remove("btn-mdb");
-      document.getElementsByName('mecanicaconst')[0].classList.remove("btn-mdb");
-      document.getElementsByName('mecanicasolos')[0].classList.remove("btn-mdb");
-      document.getElementsByName('estatistica')[0].classList.remove("btn-mdb");
-      document.getElementsByName('quimica')[0].classList.remove("btn-mdb")
-      document.getElementById('upp').classList.remove("btn-info");
+      document.getElementsByName('estetica')[0].style.opacity = "1";
+      document.getElementsByName('cartotopografia')[0].style.opacity = ".6";
+      document.getElementsByName('desenhoarqui')[0].style.opacity = ".6";
+      document.getElementsByName('electrotec')[0].style.opacity = ".6";
+      document.getElementsByName('mecanicaconst')[0].style.opacity = ".6";
+      document.getElementsByName('mecanicasolos')[0].style.opacity = ".6";
+      document.getElementsByName('estatistica')[0].style.opacity = ".6";
+      document.getElementsByName('quimica')[0].style.opacity = ".6"
+      document.getElementById('upp').style.opacity = ".6";
     }
 }

@@ -3,13 +3,13 @@
 // });
 
 function seeUpload(){
-  document.getElementById('upp').classList.add("btn-info");
-  document.getElementsByName('estruturas')[0].classList.remove("btn-mdb");
-  document.getElementsByName('gestao')[0].classList.remove("btn-mdb");
-  document.getElementsByName('instalacoes')[0].classList.remove("btn-mdb");
-  document.getElementsByName('antropologia')[0].classList.remove("btn-mdb");
-  document.getElementsByName('edificacoes')[0].classList.remove("btn-mdb");
-  document.getElementsByName('betao2')[0].classList.remove("btn-mdb");
+  document.getElementById('upp').style.opacity="1";
+  document.getElementsByName('instalacoes')[0].style.opacity=".6";
+  document.getElementsByName('estruturas')[0].style.opacity=".6";
+  document.getElementsByName('gestao')[0].style.opacity=".6";
+  document.getElementsByName('antropologia')[0].style.opacity=".6";
+  document.getElementsByName('edificacoes')[0].style.opacity=".6";
+  document.getElementsByName('betao2')[0].style.opacity=".6";
 
   document.getElementById('ctable').setAttribute("hidden", "");
   document.getElementById('cupload').removeAttribute("hidden");
