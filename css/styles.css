@@ -14,17 +14,222 @@
  * limitations under the License.
  */
 
+ .middler {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
 
+ .loader {
+   display: inline-block;
+   width: 30px;
+   height: 30px;
+   position: relative;
+   border: 4px solid #Fff;
+   top: 50%;
+   color: white;
+   animation: loader 2s infinite ease;
+ }
+
+ .loader-inner {
+   vertical-align: top;
+   display: inline-block;
+   width: 100%;
+   background-color: #fff;
+   animation: loader-inner 2s infinite ease-in;
+ }
+
+ @keyframes loader {
+   0% {
+     transform: rotate(0deg);
+   }
+
+   25% {
+     transform: rotate(180deg);
+   }
+
+   50% {
+     transform: rotate(180deg);
+   }
+
+   75% {
+     transform: rotate(360deg);
+   }
+
+   100% {
+     transform: rotate(360deg);
+   }
+ }
+
+ @keyframes loader-inner {
+   0% {
+     height: 0%;
+   }
+
+   25% {
+     height: 0%;
+   }
+
+   50% {
+     height: 100%;
+   }
+
+   75% {
+     height: 100%;
+   }
+
+   100% {
+     height: 0%;
+   }
+ }
 
  /*--------------------------------------------------------*/
  /*------------------------CUSTOM--------------------------*/
  /*--------------------------------------------------------*/
+ .spinner {
+  /* margin: 100px auto 0; */
+  width: 70px;
+  text-align: center;
+}
+
+.spinner > div {
+  width: 6px;
+  height: 6px;
+  background-color: #ffffff;
+
+  border-radius: 100%;
+  display: inline-block;
+  -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+  animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+}
+
+.spinner .bounce1 {
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
+}
+
+.spinner .bounce2 {
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s;
+}
+
+@-webkit-keyframes sk-bouncedelay {
+  0%, 80%, 100% { -webkit-transform: scale(0) }
+  40% { -webkit-transform: scale(1.0) }
+}
+
+@keyframes sk-bouncedelay {
+  0%, 80%, 100% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  } 40% {
+    -webkit-transform: scale(1.0);
+    transform: scale(1.0);
+  }
+}
+
+
+
+
+
 .backdrop {
   background: url("../images/bg-n.png") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+}
+
+.hidden.menu {
+  display: none;
+}
+
+.masthead.segment {
+  min-height: 1000px;
+  padding: 1em 0em;
+}
+.masthead .logo.item img {
+  margin-right: 1em;
+}
+.masthead .ui.menu .ui.button {
+  margin-left: 0.5em;
+}
+
+/* OLA ENG. TEXT HEADER SIZE AND MARGINS */
+.masthead h1.ui.header {
+  margin-top: 0em;
+  margin-bottom: 0em;
+  font-size: 64px;
+  font-weight: normal;
+}
+
+.masthead h2 {
+  font-size: 1.5em;
+  font-weight: normal;
+}
+
+.ui.vertical.stripe {
+  padding: 8em 0em;
+}
+.ui.vertical.stripe h3 {
+  font-size: 1em;
+}
+.ui.vertical.stripe .button + h3,
+.ui.vertical.stripe p + h3 {
+  margin-top: 3em;
+}
+.ui.vertical.stripe .floated.image {
+  clear: both;
+}
+.ui.vertical.stripe p {
+  font-size: 1.33em;
+}
+.ui.vertical.stripe .horizontal.divider {
+  margin: 3em 0em;
+}
+
+.quote.stripe.segment {
+  padding: 0em;
+}
+.quote.stripe.segment .grid .column {
+  padding-top: 5em;
+  padding-bottom: 5em;
+}
+
+.footer.segment {
+  padding: 10em 0em;
+}
+
+.secondary.pointing.menu .toc.item {
+  display: none;
+}
+
+.bg {
+  background-color: black;
+  background: url("../images/bg-n.png") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.centerBlock {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+::selection {
+  background: white; /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+  background: white; /* Gecko Browsers */
 }
 
 /*--------------------------------------------------------*/

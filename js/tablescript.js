@@ -9,12 +9,12 @@ var config = {
 firebase.initializeApp(config);
 
 // GET THE SELECTED PAGE CADEIRA NAME;
-var rawThisName = document.getElementById("thisName").innerHTML;
-var thisName = rawThisName.split(" ")[2];
+var thisName;
 
-$(document).ready(function(){
-//TABLE STUFF: 
-  // First get the reference to the database (../cadeira/)
+function listen(e){
+  console.log(e.target.name);
+  thisName = e.target.name;
+
   var rootRef = firebase.database().ref( thisName + "/");
   // 1st: SETUP THE TABLE
   var table = $('#table').on( 'processing.dt', function ( e, settings, processing ) {
@@ -30,7 +30,7 @@ $(document).ready(function(){
           "Processing": "a processar...",
           "columnDefs": [{className: 'mdl-data-table__cell--non-numeric'}]
     });
-    
+
     // 2nd: GET THE key & values FROM REALTIME DATABSE AND POPULATE THE TABLE;
     // MODEL:  var dataset = [snap.child("name").val(), snap.val().Nombre];
     rootRef.on("child_added", snap => {
@@ -41,5 +41,12 @@ $(document).ready(function(){
       console.log(snap.val()); //This is the correct for values
       console.log(snap.key);
     });
-    
+}
+
+
+$(document).ready(function(){
+//TABLE STUFF:
+  // First get the reference to the database (../cadeira/)
+
+
 });//END OF onREADY

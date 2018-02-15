@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <!-- Standard Meta -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="Portal dos Engenheiros!">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Engenheiros - 1o Ano</title>
+
+
+  <!-- Add to homescreen for Chrome on Android -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <link rel="icon" sizes="192x192" href="images/android-desktop.png">
+
+  <!-- Add to homescreen for Safari on iOS -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="Engenheiros">
+  <link rel="apple-touch-icon-precomposed" href="images/ios-desktop.png">
+
+  <!-- Tile icon for Win8 (144x144 + tile color) -->
+  <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
+  <meta name="msapplication-TileColor" content="#3372DF">
+
+  <link rel="shortcut icon" href="images/favicon.png">
+
+  <!-- Site Properties -->
+  <title>UP Engenheiros</title>
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.teal-red.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.15/css/dataTables.material.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.3.2/css/mdb.min.css">
+  <link rel="stylesheet" href="../css/styles.css">
+
+</head>
+<body id="body" class="mdl-color--grey-900">
+
+  <div id="loaded__" style="text-align: center;" class="middler">
+    <h4 style="color: white"><span style="text-align: center; margin-bottom: 20px"></span><strong>I Ano</strong></h4>
+    <span class="loader"><span class="loader-inner"></span></span>
+  </div>
+
+  <!-- Page Contents -->
+  <div hidden id="main__">
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+      <header class="mdl-layout__header mdl-color--grey-900">
+        <div class="mdl-layout__header-row">
+          <!-- Title -->
+          <a href="../" style="font-size: 18pt; margin-right: 20px" class="material-icons">arrow_back</a>
+          <span class="mdl-layout-title">1º Ano</span>
+          <!-- Add spacer, to align navigation to the right -->
+          <div class="mdl-layout-spacer"></div>
+          <button hidden class="btn btn-info" id="sair" type="button">Sair</button>
+        </div>
+      </header>
+
+      <main class="mdl-layout__content">
+        <div class="page-content">
+          <!--Card-->
+              <!--Card content-->
+              <div class="mdl-grid">
+                <div class="mdl-layout-spacer"></div>
+                <div class="mdl-cell mdl-cell--4-col mdl-cell--8-col-tablet mdl-cell--8-col-phone">
+
+                  <div class="card-body">
+                    <div class="card" style="text-align: center; padding: 20px">
+                      <h4 class="card-title">Eu sou...</h4>
+                      <span>
+                        <button id="docenteBtn" onclick="askDocenteCode()" type="button" class="btn btn-mdb">Docente
+                          <span>
+                            <div id="loadingdoc_" hidden class="spinner">
+                              <div class="bounce1"></div>
+                              <div class="bounce2"></div>
+                              <div class="bounce3"></div>
+                            </div>
+                          </span>
+                        </button>
+                        <button id="estudanteBtn" onclick="askEstudanteCode()" type="button" class="btn btn-mdb">Estudante</button>
+                      </span>
+                    </div>
+
+                  </div>
+
+                  <div id="cadeiras" class="card-body" style="opacity: 0.5; pointer-events:none;">
+                    <div id="uploadButton" hidden class="card" style="text-align: center; padding: 20px">
+                      <button onclick="seeUpload()" id="upp" type="button" class="btn btn-info">Upload / Enviar</button>
+                    </div>
+
+                    <div class="card" style="text-align: center; padding: 20px">
+                      <h4 class="card-title">Cadeiras</h4>
+                      <button onclick="listen(event)" name="matematica1"    type="button" class="btn btn-mdb">Análise Matemática I</button>
+                      <button onclick="listen(event)" name="desenhotecnico" type="button" class="btn btn-mdb">Desenho Técnico</button>
+                      <button onclick="listen(event)" name="etica"          type="button" class="btn btn-mdb">Ética e Deont. Prof.</button>
+                      <button onclick="listen(event)" name="filosofia"      type="button" class="btn btn-mdb">Filosofia</button>
+                      <button onclick="listen(event)" name="fisica1"        type="button" class="btn btn-mdb">Física I</button>
+                      <button onclick="listen(event)" name="infbasica"      type="button" class="btn btn-mdb">Informática Básica</button>
+                      <button onclick="listen(event)" name="meic"           type="button" class="btn btn-mdb">MEIC</button>
+                      <button onclick="listen(event)" name="teclp"          type="button" class="btn btn-mdb">Técn. Express. e Comun. em LP</button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="mdl-cell mdl-cell--8-col">
+                  <div id="ctable" style="opacity: 0.5; pointer-events: none" class="card-body">
+                    <div class="card" style="text-align: center; padding: 20px">
+                      <!--Title-->
+                      <h3>Tabela de Ficheiros</h3>
+                      <p id="waitingText">Por favor escolha uma cadeira.</p>
+
+                      <div class="mdl-grid" style="width: 100%; overflow-x: scroll ">
+                        <div id="tableDiv" hidden class="mdl-cell mdl-cell--12-col">
+                            <table id="table" class="mdl-data-table mdl-js-data-table mdl-shadow--2dp" style="width: 100%;" >
+                              <thead>
+                                <tr class="mdl-color--grey-900">
+                                  <th class="mdl-data-table__cell--non-numeric mdl-color-text--white"><u>DESCRIÇÃO DO FICHEIRO</u></th>
+                                  <th class="mdl-data-table__cell--non-numeric mdl-color-text--white"><u>BAIXAR</u></th>
+                                </tr>
+                              </thead>
+                            </table>
+                        </div>
+
+                        <div class="mdl-layout-spacer"></div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Upload Shit -->
+                  <div hidden id="cupload" class="card-body">
+                    <div class="card" style="padding: 20px">
+                      <!--Title-->
+                      <h3 style="text-align: center">Enviar Ficheiros</h3>
+                      <p style="text-align: center">Faça aqui o upload do ficheiro.</p>
+
+                      <div class="mdl-grid" style="width: 100%;">
+                          <input type="file" id="fileUploadInput"/>
+
+                          <select style="width: 100%; margin-top: 20px; margin-bottom: 10px" id="disciplinasSelect">
+                            <optgroup label="Cadeiras">
+                              <option value="" >Selecione uma Cadeira</option>
+                              <option value="matematica1" >A. Matemática 1</option>
+                              <option value="desenhotecnico" >Desenho Técnico</option>
+                              <option value="etica" >Ética</option>
+                              <option value="filosofia" >Filosofia</option>
+                              <option value="fisica1" >Física 1</option>
+                              <option value="infbasica" >Informática Básica</option>
+                              <option value="meic" >MEIC</option>
+                              <option value="teclp" >Técnicas de Expressão em LP</option>
+                            </optgroup>
+
+                          <div style="width: 100%" class="mdl-textfield mdl-js-textfield">
+                            <input class="mdl-textfield__input" placeholder="Nome do Ficheiro" type="text" id="filenameInput">
+                          </div>
+                          <div class="mdl-layout-spacer"></div>
+
+                          <button style="width: 130px;" onclick="goUpload()" id="upload_" type="button" class="btn btn-primary">Enviar</button>
+
+                          <div style="width: 100%; margin-top: 20px" class="mdl-progress mdl-js-progress is-upgraded" data-upgraded=",MaterialProgress">
+                            <div id="p1" class="progressbar bar bar1 mdl-color--blue" style="width: 0%; height:125%"></div>
+                            <div class="bufferbar bar bar2" style="width: 100%"></div>
+                            <div class="auxbar bar bar3" style="width: 0%"></div>
+                          </div>
+
+                          <div id="progressChip" style="display: none" class="animated flipInX">
+                            <!-- Spinner Chip -->
+                            <span class="mdl-chip mdl-chip--contact mdl-color--blue-grey-100" style="margin-top: 2px;">
+                                <span id="spinner" class="mdl-chip__contact mdl-spinner mdl-spinner--single-color mdl-color-text--white mdl-js-spinner is-active"></span>
+                                <span id="percentshow" class="mdl-chip__text mdl-color-text--blue-grey-600">0%</span>
+                            </span>
+                            <div style="display: inline-block; margin-left: 8px" >
+                              <!-- Resume chip -->
+                              <button id="resumeIcon" style="margin-top: 8px; display:none" class="mdl-js-ripple-effect mdl-color--grey-100 mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab" onclick="resumeUpload()">
+                                <i class="material-icons mdl-color-text--yellow-600">play_circle_filled</i>
+                              </button>
+                              <!-- Pause Chip -->
+                              <button id="pauseIcon" style="margin-top: 8px" class="mdl-js-ripple-effect mdl-color--grey-100 mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab" onclick="pauseUpload()">
+                                <i class="material-icons mdl-color-text--orange-300">pause_circle_filled</i>
+                              </button>
+                              <!-- Cancel Chip -->
+                              <!-- Mini FAB button -->
+                              <button style="margin-top: 8px;" class="mdl-js-ripple-effect mdl-color--grey-100 mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab" onclick="cancelUpload()">
+                                <i class="material-icons mdl-color-text--red-400">cancel</i>
+                              </button>
+                            </div>
+                          </div>
+
+                        <div class="mdl-layout-spacer"></div>
+                        <!-- snackbar -->
+                        <div id="toast" class="mdl-js-snackbar mdl-snackbar">
+                          <div class="mdl-snackbar__text"></div>
+                          <button class="mdl-snackbar__action" type="button"></button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+
+
+          <!--/.Card-->
+
+        </div>
+      </main>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+<script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.3.1/firebase.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.3.2/js/mdb.min.js"></script>
+<script src="https://use.fontawesome.com/8666852d21.js"></script>
+
+<script type="text/javascript" src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/1.10.15/js/dataTables.material.min.js"></script>
+<script type="text/javascript" src="tablescript.js"></script>
+<script type="text/javascript" src="upload.js"></script>
+<script type="text/javascript" src="primeiroano.js"></script>
+
+
+
+</body>
+</html>
