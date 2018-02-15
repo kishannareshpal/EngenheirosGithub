@@ -10,6 +10,7 @@ document.onreadystatechange = function () {
         document.getElementById("main__").removeAttribute("hidden", "");
         document.getElementById('body').classList.remove("mdl-color--grey-900");
         document.getElementById('body').classList.add("mdl-color--grey-200");
+        componentHandler.upgradeDom();
       },1700);
   }
 };
@@ -65,7 +66,6 @@ firebase.auth().onAuthStateChanged(firebaseUser => {
     document.getElementById('sair').setAttribute("hidden", "");
     document.getElementById('uploadButton').setAttribute("hidden", "");
 
-
   }
 });
 
@@ -83,6 +83,9 @@ function askEstudanteCode(){
     document.getElementById('ctable').style.opacity = ".5";
     document.getElementById('ctable').style.pointerEvents = "none";
 
+    document.getElementById('yearSelect').setAttribute("disabled", "");
+    document.getElementById('semestreSelect').setAttribute("disabled", "");
+
 
   } else {
     document.getElementById('docenteBtn').setAttribute("disabled", "");
@@ -92,6 +95,9 @@ function askEstudanteCode(){
 
     document.getElementById('ctable').style.opacity = "1.0";
     document.getElementById('ctable').style.pointerEvents = null;
+
+    document.getElementById('yearSelect').removeAttribute("disabled", "");
+    document.getElementById('semestreSelect').removeAttribute("disabled", "");
 
   }
 }
@@ -107,3 +113,24 @@ $( "#sair" ).click(function() {
     return null;
   }
 });
+
+var cadeirasButton = document.getElementById('cadeirasButton');
+
+function changed(){
+  var semestreSelect = document.getElementById('semestreSelect').value;
+
+  if (semestreSelect == "1oSem") {
+    cadeirasButton.innerHTML="";
+    for (var n = 0, i = 0; n < cadeiras1oSemNAMES.length, i < cadeiras1oSemIDS.length; n++, i++) {
+        cadeirasButton.insertAdjacentHTML('beforeEnd', "<button style='width: 100%; cursor: pointer' name='" + cadeiras1oSemIDS[i] + "' type='button' class='btn btn-mdb'>" + cadeiras1oSemNAMES[n] + "</button>");
+    }
+
+  } else if (semestreSelect == "2oSem") {
+    cadeirasButton.innerHTML="";
+    for (var n = 0, i = 0; n < cadeiras2oSemNAMES.length, i < cadeiras2oSemIDS.length; n++, i++) {
+        cadeirasButton.insertAdjacentHTML('beforeEnd', "<button style='width: 100%; cursor: pointer' name='" + cadeiras2oSemIDS[i] + "' type='button' class='btn btn-mdb'>" + cadeiras2oSemNAMES[n] + "</button>");
+    }
+  }
+}
+
+changed();

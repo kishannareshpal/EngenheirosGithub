@@ -22,6 +22,7 @@
   <!-- Tile icon for Win8 (144x144 + tile color) -->
   <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
   <meta name="msapplication-TileColor" content="#3372DF">
+  <meta name="page_version" content="1oAno">
 
   <link rel="shortcut icon" href="images/favicon.png">
 
@@ -90,14 +91,29 @@
 
                     <div class="card" style="text-align: center; padding: 20px">
                       <h4 class="card-title">Cadeiras</h4>
-                      <button onclick="listen(event)" name="matematica1"    type="button" class="btn btn-mdb">Análise Matemática I</button>
-                      <button onclick="listen(event)" name="desenhotecnico" type="button" class="btn btn-mdb">Desenho Técnico</button>
-                      <button onclick="listen(event)" name="etica"          type="button" class="btn btn-mdb">Ética e Deont. Prof.</button>
-                      <button onclick="listen(event)" name="filosofia"      type="button" class="btn btn-mdb">Filosofia</button>
-                      <button onclick="listen(event)" name="fisica1"        type="button" class="btn btn-mdb">Física I</button>
-                      <button onclick="listen(event)" name="infbasica"      type="button" class="btn btn-mdb">Informática Básica</button>
-                      <button onclick="listen(event)" name="meic"           type="button" class="btn btn-mdb">MEIC</button>
-                      <button onclick="listen(event)" name="teclp"          type="button" class="btn btn-mdb">Técn. Express. e Comun. em LP</button>
+                      <span>
+                        <select id="yearSelect">
+                          <option value="2018">2018</option>
+                          <option disabled value="2019">2019</option>
+                          <option disabled value="2020">2020</option>
+                          <option disabled value="2021">2021</option>
+                        </select>
+                        <select onchange="changed()" id="semestreSelect">
+                          <option value="1oSem">1º Semestre</option>
+                          <option disabled value="2oSem">2º Semestre</option>
+                        </select>
+                      </span>
+
+                      <span id="cadeirasButton">
+                        <!-- <button style="width: 100%" onclick="listen(event)" name="matematica1"    type="button" class="btn btn-mdb">Análise Matemática I          </button>
+                        <button style="width: 100%" onclick="listen(event)" name="desenhotecnico" type="button" class="btn btn-mdb">Desenho Técnico               </button>
+                        <button style="width: 100%" onclick="listen(event)" name="etica"          type="button" class="btn btn-mdb">Ética e Deont. Prof.          </button>
+                        <button style="width: 100%" onclick="listen(event)" name="filosofia"      type="button" class="btn btn-mdb">Filosofia                     </button>
+                        <button style="width: 100%" onclick="listen(event)" name="fisica1"        type="button" class="btn btn-mdb">Física I                      </button>
+                        <button style="width: 100%" onclick="listen(event)" name="infbasica"      type="button" class="btn btn-mdb">Informática Básica            </button>
+                        <button style="width: 100%" onclick="listen(event)" name="meic"           type="button" class="btn btn-mdb">MEIC                          </button>
+                        <button style="width: 100%" onclick="listen(event)" name="teclp"          type="button" class="btn btn-mdb">Técn. Express. e Comun. em LP </button> -->
+                      </span>
                     </div>
                   </div>
                 </div>
@@ -137,9 +153,9 @@
                           <input type="file" id="fileUploadInput"/>
 
                           <select style="width: 100%; margin-top: 20px; margin-bottom: 10px" id="disciplinasSelect">
-                            <optgroup label="Cadeiras">
-                              <option value="" >Selecione uma Cadeira</option>
-                              <option value="matematica1" >A. Matemática 1</option>
+                            <option value="" >Selecione uma Cadeira</option>
+                            <optgroup id="1s" disabled value="1oSem" label="1º Semestre">
+                              <option value="matematica1" >A. Matemática I</option>
                               <option value="desenhotecnico" >Desenho Técnico</option>
                               <option value="etica" >Ética</option>
                               <option value="filosofia" >Filosofia</option>
@@ -148,6 +164,18 @@
                               <option value="meic" >MEIC</option>
                               <option value="teclp" >Técnicas de Expressão em LP</option>
                             </optgroup>
+
+                            <optgroup id="2s" disabled value="2oSem" label="2º Semestre">
+                              <option value="matematica2" >A. Matemática II</option>
+                              <option value="algebra" >Álgebra Linear</option>
+                              <option value="fisica2" >Física 2</option>
+                              <option value="gdescritiva" >Geometria Descritiva</option>
+                              <option value="higiene" >Higiene e S. no Trabalho</option>
+                              <option value="ingles" >Inglês</option>
+                              <option value="pce" >Práticas de Carp. e Estaleiro</option>
+                              <option value="teologia" >Teologia</option>
+                            </optgroup>
+                          </select>
 
                           <div style="width: 100%" class="mdl-textfield mdl-js-textfield">
                             <input class="mdl-textfield__input" placeholder="Nome do Ficheiro" type="text" id="filenameInput">
@@ -218,19 +246,21 @@
 
 
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
-<script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
-<script src="https://www.gstatic.com/firebasejs/4.3.1/firebase.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.3.2/js/mdb.min.js"></script>
-<script src="https://use.fontawesome.com/8666852d21.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+  <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.3.1/firebase.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.3.2/js/mdb.min.js"></script>
+  <script src="https://use.fontawesome.com/8666852d21.js"></script>
 
-<script type="text/javascript" src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
-<script type="text/javascript" src="https://cdn.datatables.net/1.10.15/js/dataTables.material.min.js"></script>
-<script type="text/javascript" src="tablescript.js"></script>
-<script type="text/javascript" src="upload.js"></script>
-<script type="text/javascript" src="primeiroano.js"></script>
+  <script type="text/javascript" src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
+  <script type="text/javascript" src="https://cdn.datatables.net/1.10.15/js/dataTables.material.min.js"></script>
+  <script type="text/javascript" src="../js/tablescript.js"></script>
+  <script type="text/javascript" src="anosSupl.js"></script>
+  <script type="text/javascript" src="../js/anos.js"></script>
+  <script type="text/javascript" src="../js/timedUpdate.js"></script>
+  <script type="text/javascript" src="../js/upload.js"></script>
 
 
 

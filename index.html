@@ -68,15 +68,7 @@
         <div class="seven wide column">
           <h4 class="ui inverted header"></h4>
 
-          <p style="text-align: left">
-            <i class="copyright icon"></i>2018. Feito com <i style="font-size: 12px; color: #f25151" class="heart icon"></i>por
-            <strong style="cursor: pointer;" title="Social">Kishan Nareshpal</strong>.
-            <br>
-            Para estudantes da Engenharia Civil da UP-Maxixe
-            <br>
-            <a href="#home" style="color: #ffffff">www.upengenheiros.com</a>
-            <br>
-            <a href="#?version=3.1" style="color: #ffffff"><i>v.3.1</i></a>
+          <p id="copyright" style="text-align: left">
           </p>
 
         </div>
@@ -94,22 +86,10 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.3.2/js/mdb.min.js"></script>
   <script src="https://use.fontawesome.com/8666852d21.js"></script>
-
-
   <script src="/tippyjs-1.2.1/dist/tippy.js"></script>
-  <!-- Custom Script Here -->
-  <!-- <script src="/js/loginCheckIndex.js"></script> -->
 
 <!-- Quick Tooltip -->
   <script>
-      tippy('#ttUpload', {
-        position: 'top',
-        arrow: true,
-        theme: 'light',
-        size: 'big',
-        inertia: true
-      });
-
       tippy('#tt1', {
         position: 'bottom',
         arrow: true,
@@ -117,6 +97,9 @@
         size: 'big',
         inertia: true
       });
+
+      document.getElementById('copyright').innerHTML='<i class="copyright icon"></i>' + (new Date()).getFullYear().toString() + '. Feito com <i style="font-size: 12px; color: #f25151" class="heart icon"></i>por<strong style="cursor: pointer;" title="Social">Kishan Nareshpal</strong>.<br>Para estudantes da Engenharia Civil da UP-Maxixe<br><a href="#home" style="color: #ffffff">www.upengenheiros.com</a><br><a href="#?version=3.1" style="color: #ffffff"><i>v.3.2.8</i></a>'
+
   </script>
 
   </body>
