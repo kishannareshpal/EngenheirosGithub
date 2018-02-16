@@ -11,6 +11,7 @@ firebase.initializeApp(config);
 // GET THE SELECTED PAGE CADEIRA NAME;
 var thisName;
 var actualPageYear = document.getElementsByName('page_version')[0].content;
+var rootRef;
 
 var table = $('#table').DataTable({
         "searching": false,
@@ -25,6 +26,8 @@ var table = $('#table').DataTable({
 });
 
 
+var test;
+var tes1;
 // $('#cadeirasButton').on('click', 'button', function () {
   // var $inputBtns = $('[class="btn btn-mdb"]');
   $('#cadeirasButton').on('click', 'button',function() {
@@ -38,6 +41,7 @@ var table = $('#table').DataTable({
 
       var selectedYear = document.getElementById('yearSelect').value;
       var selectedSemestre = document.getElementById('semestreSelect').value;
+
       document.getElementById('ctable').removeAttribute("hidden", "");
       document.getElementById('waitingText').innerHTML = this.innerHTML;
       document.getElementById('tableDiv').removeAttribute("hidden", "");
@@ -47,24 +51,30 @@ var table = $('#table').DataTable({
       document.querySelector('#table_wrapper > div:nth-child(1)').setAttribute("hidden", "");
       document.querySelector('#table_wrapper > div:nth-child(3)').setAttribute("hidden", "");
 
-      var rootRef = firebase.database().ref( "/" + actualPageYear + "/" + selectedYear + "/" + selectedSemestre + "/" + getNameButton + "/");
+      rootRef = firebase.database().ref( "/" + actualPageYear + "/" + selectedYear + "/" + selectedSemestre + "/" + getNameButton + "/");
       // 1st: Clear all possible values first.
       var dataSet = [];
       table.clear().draw();
 
-        // 2nd: GET THE key & values FROM REALTIME DATABSE AND POPULATE THE TABLE;
-        // MODEL:  var dataset = [snap.child("name").val(), snap.val().Name];
-        rootRef.on("child_added", function(snap) {
-          dataSet = [snap.key, snap.val()];
+      // 2nd: GET THE key & values FROM REALTIME DATABSE AND POPULATE THE TABLE;
+      // MODEL:  var dataset = [snap.child("name").val(), snap.val().Name];
+      rootRef.on("value", function(datasnap) {
+        if(!datasnap.exists()){
+          dataSet = ["Nenhum Ficheiro Encontrado", ""];
           table.rows.add([dataSet]).draw();
-          // console.log(dataSet);
-          // console.log(snap.child());
-          console.log(snap.val()); //This is the correct for values
-          console.log(snap.key);
-          // document.getElementById('table_info').setAttribute("hidden", "");
-          // document.getElementById('table_filter').setAttribute("hidden", "");
-          document.querySelector('#table_wrapper > div:nth-child(1)').setAttribute("hidden", "");
-          document.querySelector('#table_wrapper > div:nth-child(3)').removeAttribute("hidden", "");
-        });
+        }
+        console.log("me");
+      });
+
+      rootRef.on("child_added", function(snap) {
+        dataSet = [snap.key, snap.val()];
+        table.rows.add([dataSet]).draw();
+        // check if data exists
+        // if(snap.val() == "")
+        document.querySelector('#table_wrapper > div:nth-child(1)').setAttribute("hidden", "");
+        document.querySelector('#table_wrapper > div:nth-child(3)').removeAttribute("hidden", "");
+      });
+
+
   });
 // });

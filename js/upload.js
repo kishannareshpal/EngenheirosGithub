@@ -13,6 +13,10 @@ function seeUpload(){
   document.getElementById('cupload').removeAttribute("hidden");
 }
 
+var currentSemestre;
+function disc(e){
+  currentSemestre = e.target[e.target.selectedIndex].parentNode.attributes[1].value.toString();
+}
 
 function goUpload() {
   var upbutton = document.getElementById('upload_')
@@ -25,7 +29,6 @@ function goUpload() {
   var percentshow = document.getElementById("percentshow");
   var pauseicon = document.getElementById("pauseIcon");
   var resumeicon = document.getElementById("resumeIcon");
-  var currentSemestre = document.getElementById("disciplinasSelect").childNodes[1].attributes[0].value;
 
   var databaseRef = firebase.database().ref("/" + actualPageYear + "/" + (new Date()).getFullYear().toString() + "/" + currentSemestre + "/");
   var snackbarContainer = document.getElementById("toast");

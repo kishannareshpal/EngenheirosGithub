@@ -11,20 +11,20 @@
 
   <!-- Add to homescreen for Chrome on Android -->
   <meta name="mobile-web-app-capable" content="yes">
-  <link rel="icon" sizes="192x192" href="images/android-desktop.png">
+  <link rel="icon" sizes="192x192" href="../images/android-desktop.png">
 
   <!-- Add to homescreen for Safari on iOS -->
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   <meta name="apple-mobile-web-app-title" content="Engenheiros">
-  <link rel="apple-touch-icon-precomposed" href="images/ios-desktop.png">
+  <link rel="apple-touch-icon-precomposed" href="../images/ios-desktop.png">
 
   <!-- Tile icon for Win8 (144x144 + tile color) -->
-  <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
+  <meta name="msapplication-TileImage" content="../images/touch/ms-touch-icon-144x144-precomposed.png">
   <meta name="msapplication-TileColor" content="#3372DF">
   <meta name="page_version" content="3oAno">
 
-  <link rel="shortcut icon" href="images/favicon.png">
+  <link rel="shortcut icon" href="../images/favicon.png">
 
   <!-- Site Properties -->
   <title>UP Engenheiros</title>
@@ -152,7 +152,7 @@
                       <div class="mdl-grid" style="width: 100%;">
                           <input type="file" id="fileUploadInput"/>
 
-                          <select style="width: 100%; margin-top: 20px; margin-bottom: 10px" id="disciplinasSelect">
+                          <select style="width: 100%; margin-top: 20px; margin-bottom: 10px" onchange="disc(event)" id="disciplinasSelect">
                              <option value="">             Selecione uma Cadeira               </option>
                             <optgroup id="1s" disabled  value="1oSem" label="1º Semestre">
                               <option value="hidrgeral">   Hidráulica Geral                    </option>
