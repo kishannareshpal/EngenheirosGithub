@@ -3,7 +3,7 @@
 // });
 
 $("#filenameInput").alphanum({
-   allow:    "-_{}|\\()*&%@?;!±§~˜ˆ",
+   allow:    "-_{}|\\()&%@?;!±§~˜ˆ",
    disallow: ".&[]#/",
    allowOtherCharSets : true,
    allowLatin         : true
@@ -18,6 +18,45 @@ function seeUpload(){
   document.getElementById('cupload').removeAttribute("hidden");
 
 }
+var checked;
+var filenameInput;
+
+function fileSelected(){
+  filenameInput = document.getElementById('filenameInput');
+
+  document.getElementById('useDefaultNameCheckbox').removeAttribute("disabled", "");
+  document.getElementById('checklabel').classList.remove("is-disabled");
+
+  if (checked) {
+    var fn = document.getElementById('fileUploadInput').files[0].name;
+    fn = fn.substring(0, fn.lastIndexOf('.'));
+    fnNoPoint = fn.replace(/\./g, "_");
+    filenameInput.value = fnNoPoint;
+    // document.getElementById('filenameInput').setAttribute("disabled", "");
+  } else {
+    filenameInput.value = "";
+    // document.getElementById('filenameInput').removeAttribute("disabled", "");
+  }
+}
+
+
+function checkboxed(){
+  checked = document.getElementById('useDefaultNameCheckbox').checked;
+  console.log(checked);
+
+  filenameInput = document.getElementById('filenameInput');
+
+  if (checked) {
+    var fn = document.getElementById('fileUploadInput').files[0].name;
+    fn = fn.substring(0, fn.lastIndexOf('.'));
+    fnNoPoint = fn.replace(/\./g, "_");
+    filenameInput.value = fnNoPoint;
+    // document.getElementById('filenameInput').setAttribute("disabled", "");
+  } else {
+    filenameInput.value = "";
+    // document.getElementById('filenameInput').removeAttribute("disabled", "");
+  }
+}
 
 var currentSemestre;
 function disc(e){
@@ -30,6 +69,7 @@ function goUpload() {
   var selectedFileValue = document.getElementById('fileUploadInput').value;
 
   var selectedCadeiraName = document.getElementById('disciplinasSelect').value;
+
   var fileRawGivenName = document.getElementById('filenameInput').value;
 
   var progressChip = document.getElementById("progressChip");
@@ -64,8 +104,8 @@ function goUpload() {
         function progress(snapshot){
           var percentageRaw = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
           var percentage = Math.round(percentageRaw * 100) / 100;
-          if (percentage > 2) {
-            percentage-=1
+          if (percentage > .2) {
+            percentage-=.1
           }
           document.getElementById("p1").style.width = percentage + "%";
           progressChip.removeAttribute("hidden", "");
@@ -99,6 +139,10 @@ function goUpload() {
               snackbarContainer.MaterialSnackbar.showSnackbar(message);
               break;
           }
+
+          window.onbeforeunload = function(event){
+              return;
+          };
         },
 
         function complete(){
@@ -181,4 +225,8 @@ function cancelUpload() {
   var cancelTask = task;
   cancelTask.cancel();
   console.log("cancelled");
+
+  window.onbeforeunload = function(event){
+      return;
+  };
 }

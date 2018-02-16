@@ -179,9 +179,15 @@
                           </select>
 
                           <div style="width: 100%" class="mdl-textfield mdl-js-textfield">
-                            <input class="mdl-textfield__input" placeholder="Nome do Ficheiro" type="text" id="filenameInput">
+                            <input class="mdl-textfield__input" placeholder="Nomear o ficheiro para encontrá-lo facilmente" type="text" id="filenameInput">
                           </div>
-                          <div class="mdl-layout-spacer"></div>
+
+                          <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect is-disabled" id="checklabel" for="useDefaultNameCheckbox">
+                            <input disabled type="checkbox" onclick="checkboxed()" id="useDefaultNameCheckbox" class="mdl-checkbox__input">
+                            <span class="mdl-checkbox__label">Utilizar o nome original do ficheiro.</span>
+                          </label>
+
+                          <br><br>
 
                           <button style="width: 140px;" onclick="goUpload()" id="upload_" type="button" class="btn btn-primary">Enviar</button>
 
