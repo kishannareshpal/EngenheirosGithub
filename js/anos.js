@@ -1,19 +1,35 @@
 var promise;
 
-document.onreadystatechange = function () {
-  var state = document.readyState;
+// document.onreadystatechange = function () {
+//   var state = document.readyState;
+//
+//   if (state == 'complete') {
+//       setTimeout(function(){
+//         // $("#loading").addClass("hidden");
+//         document.getElementById("loaded__").setAttribute("hidden", "");
+//         document.getElementById("main__").removeAttribute("hidden", "");
+//         document.getElementById('body').classList.remove("mdl-color--grey-900");
+//         document.getElementById('body').classList.add("mdl-color--grey-200");
+//       },1);
+//   }
+// };
+document.getElementById("loaded__").setAttribute("hidden", "");
+document.getElementById("main__").removeAttribute("hidden", "");
+document.getElementById('body').classList.remove("mdl-color--grey-900");
+document.getElementById('body').classList.add("mdl-color--grey-200");
 
-  if (state == 'complete') {
-      setTimeout(function(){
-        // $("#loading").addClass("hidden");
-        document.getElementById("loaded__").setAttribute("hidden", "");
-        document.getElementById("main__").removeAttribute("hidden", "");
-        document.getElementById('body').classList.remove("mdl-color--grey-900");
-        document.getElementById('body').classList.add("mdl-color--grey-200");
-        componentHandler.upgradeDom();
-      },1700);
-  }
-};
+if(document.cookie.indexOf("signedin=yes") >= 0){
+  document.getElementById('loadingdoc_').removeAttribute("hidden", "");
+  document.getElementById('uploadButton').setAttribute("hidden", "");
+  document.getElementById('estudanteBtn').setAttribute("disabled", "");
+  document.getElementById('docenteBtn').style.pointerEvents = "none";
+
+  document.getElementById('cadeiras').style.opacity = ".6";
+  document.getElementById('cadeiras').style.pointerEvents = "none";
+
+  document.getElementById('ctable').style.opacity = ".6";
+  document.getElementById('ctable').style.pointerEvents = "none";
+}
 
 function askDocenteCode(){
   var code = prompt("Docente: Por favor digite o código");
@@ -31,7 +47,7 @@ function askDocenteCode(){
         alert("O código está incorreto. Tente novamente.");
       } else {
         document.getElementById('loadingdoc_').setAttribute("hidden", "");
-        alert("Ocorreu um erro, tente novamente.");
+        alert("Erro na conexão com o servidor. Tente outra vez");
       }
     });
   }
@@ -43,7 +59,7 @@ firebase.auth().onAuthStateChanged(function(firebaseUser) {
     //Save a cookie
     if (firebaseUser.email == "docente@upengenheiros.com") {
       document.cookie = "signedin=yes; expires=Thu, 18 Dec 2019 12:00:00 UTC; path=/";
-      console.log("Logged in and cookie saved");
+      // console.log("Logged in and cookie saved");
       document.getElementById('loadingdoc_').setAttribute("hidden", "");
       document.getElementById('sair').removeAttribute("hidden", "");
       document.getElementById('uploadButton').removeAttribute("hidden", "");
