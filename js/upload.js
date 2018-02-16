@@ -2,6 +2,12 @@
 //       disallow: ".&[]#/"
 // });
 
+$("#filenameInput").alphanum({
+   allow:    "-_{}|\\()*&%@?;!±§~˜ˆ",
+   disallow: ".&[]#/",
+   allowOtherCharSets : true,
+   allowLatin         : true
+});
 
 function seeUpload(){
   $('[class="btn btn-mdb"]').not("[name='']").css('opacity', ".6");
@@ -11,9 +17,6 @@ function seeUpload(){
   document.getElementById('ctable').setAttribute("hidden", "");
   document.getElementById('cupload').removeAttribute("hidden");
 
-    $("#filenameInput").alphanum({
-       disallow: ".&[]#/"
-    });
 }
 
 var currentSemestre;
@@ -29,6 +32,7 @@ function goUpload() {
   var selectedCadeiraName = document.getElementById('disciplinasSelect').value;
   var fileRawGivenName = document.getElementById('filenameInput').value;
 
+  var progressChip = document.getElementById("progressChip");
   var percentshow = document.getElementById("percentshow");
   var pauseicon = document.getElementById("pauseIcon");
   var resumeicon = document.getElementById("resumeIcon");
@@ -64,8 +68,12 @@ function goUpload() {
             percentage-=1
           }
           document.getElementById("p1").style.width = percentage + "%";
-          progressChip.style.display = "block";
+          progressChip.removeAttribute("hidden", "");
           percentshow.innerHTML = percentage+ "%";
+
+          window.onbeforeunload = function(event){
+              return confirm("Esta acção irá cancelar o upload do ficheiro.\nDeseja continuar?");
+          };
         },
 
         function (error){
@@ -96,8 +104,12 @@ function goUpload() {
         function complete(){
           document.getElementById('upload_').removeAttribute("disabled", "");
           console.log("upload complete!");
-          progressChip.style.display="none";
+          progressChip.setAttribute("hidden", "");
           p1.style.width="100%";
+
+          window.onbeforeunload = function(event){
+              return;
+          };
 
 
           var message = {message: "Upload efectuado com sucesso!" };
@@ -144,8 +156,8 @@ function goUpload() {
 }
 
 function pauseUpload() {
-  document.getElementById("pauseIcon").style.display="none";
-  document.getElementById("resumeIcon").style.display="inline-block";
+  document.getElementById("pauseIcon").setAttribute("hidden", "");
+  document.getElementById("resumeIcon").removeAttribute("hidden", "");
   spinner.classList.remove("is-active");
 
   var pauseTask = task;
@@ -154,15 +166,15 @@ function pauseUpload() {
 }
 
 function resumeUpload(){
-  document.getElementById("resumeIcon").style.display="none";
-  document.getElementById("pauseIcon").style.display="inline-block";
+  document.getElementById("resumeIcon").setAttribute("hidden", "");
+  document.getElementById("pauseIcon").removeAttribute("hidden", "");
   spinner.classList.add("is-active");
   var resumeTask = task;
   resumeTask.resume();
 }
 
 function cancelUpload() {
-  progressChip.style.display="none";
+  progressChip.setAttribute("hidden", "");
   document.getElementById('upload_').removeAttribute("disabled", "");
   p1.style.width="0%";
 
