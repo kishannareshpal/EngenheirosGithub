@@ -23,7 +23,7 @@ function askDocenteCode(){
     document.getElementById('loadingdoc_').removeAttribute("hidden", "");
     promise = firebase.auth().signInWithEmailAndPassword("docente@upengenheiros.com", code);
 
-    promise.catch(e => {
+    promise.catch(function(e) {
       console.log(e);
       // If enter incorrect code
       if(e.code === "auth/wrong-password"){
@@ -37,7 +37,7 @@ function askDocenteCode(){
   }
 }
 
-firebase.auth().onAuthStateChanged(firebaseUser => {
+firebase.auth().onAuthStateChanged(function(firebaseUser) {
   if(firebaseUser){
     //If the user is logged in do this
     //Save a cookie

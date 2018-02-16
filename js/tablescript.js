@@ -54,7 +54,7 @@ var table = $('#table').DataTable({
 
         // 2nd: GET THE key & values FROM REALTIME DATABSE AND POPULATE THE TABLE;
         // MODEL:  var dataset = [snap.child("name").val(), snap.val().Name];
-        rootRef.on("child_added", snap => {
+        rootRef.on("child_added", function(snap) {
           dataSet = [snap.key, snap.val()];
           table.rows.add([dataSet]).draw();
           // console.log(dataSet);
