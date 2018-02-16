@@ -3,7 +3,6 @@
 // });
 
 
-
 function seeUpload(){
   $('[class="btn btn-mdb"]').not("[name='']").css('opacity', ".6");
   document.getElementById('yearSelect').setAttribute("disabled", "");
@@ -11,6 +10,10 @@ function seeUpload(){
 
   document.getElementById('ctable').setAttribute("hidden", "");
   document.getElementById('cupload').removeAttribute("hidden");
+
+    $("#filenameInput").alphanum({
+       disallow: ".&[]#/"
+    });
 }
 
 var currentSemestre;
@@ -51,8 +54,9 @@ function goUpload() {
     // Upload the file now
     task = storageRef.put(selectedFile);
 
-    task.on('state_changed',
 
+
+    task.on('state_changed',
         function progress(snapshot){
           var percentageRaw = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
           var percentage = Math.round(percentageRaw * 100) / 100;
