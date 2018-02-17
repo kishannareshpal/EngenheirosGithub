@@ -94,6 +94,14 @@
                     <div class="card" style="text-align: center; padding: 20px">
                       <h4 class="card-title">Cadeiras</h4>
                       <span>
+                        <select onchange="tronco()" id="troncoSelect">
+                          <optgroup label="Tronco de Especialização">
+                            <option value="edificios">Edifícios</option>
+                            <option value="obrashidraulicas">Obras Hidráulicas</option>
+                            <option value="viasdecomunicacao">Vias de Comunicação</option>
+                          </optgroup>
+                        </select>
+                        <br>
                         <select id="yearSelect">
                           <option value="2018">2018</option>
                           <option disabled value="2019">2019</option>
@@ -101,8 +109,8 @@
                           <option disabled value="2021">2021</option>
                         </select>
                         <select onchange="changed()" id="semestreSelect">
-                          <option value="1oSem">1º Semestre</option>
-                          <option disabled value="2oSem">2º Semestre</option>
+                          <option value="1oSem">1º Semestre </option>
+                          <option disabled value="2oSem">2º Semestre </option>
                         </select>
                       </span>
 
@@ -124,8 +132,10 @@
                   <div id="ctable" style="opacity: 0.5; pointer-events: none" class="card-body">
                     <div class="card" style="text-align: center; padding: 20px">
                       <!--Title-->
-                      <h3>Tabela de Ficheiros</h3>
+                      <h3><strong>Tabela de Ficheiros</strong></h3>
+                      <h6 id="waitingText0"></h6>
                       <p id="waitingText">Por favor escolha uma cadeira.</p>
+
 
                       <div class="mdl-grid" style="width: 100%; overflow-x: scroll ">
                         <div id="tableDiv" hidden class="mdl-cell mdl-cell--12-col">
@@ -154,17 +164,30 @@
                       <div class="mdl-grid" style="width: 100%;">
                           <input onchange="fileSelected()" type="file" id="fileUploadInput"/>
 
+                          <select style="width: 100%; margin-top: 20px; margin-bottom: 5px" onchange="tr(event)" id="up_troncoSelect">
+                            <optgroup label="Tronco de Especialização">
+                              <option value="edificios">         Edifícios           </option>
+                              <option value="obrashidraulicas">  Obras Hidráulicas   </option>
+                              <option value="viasdecomunicacao"> Vias de Comunicação </option>
+                            </optgroup>
+                          </select>
+
+
                           <select style="width: 100%; margin-top: 20px; margin-bottom: 10px" onchange="disc(event)" id="disciplinasSelect">
                              <option value="">              Selecione uma Cadeira                </option>
                             <optgroup id="1s" disabled  value="1oSem" label="1º Semestre">
-                              <option value="estruturas">   Estruturas Metálicas e de Madeira   </option>
+                              <!-- <option value="estruturas">   Estruturas Metálicas e de Madeira   </option>
                               <option value="gestao">       Gestão de Qualidade                 </option>
                               <option value="instalacoes">  Instalações em Edifícios I          </option>
                               <option value="antropologia"> Antropologia Cultural de Moçambique </option>
                               <option value="edificacoes">  Edificações                         </option>
-                              <option value="betao2">       Betão II                            </option>
+                              <option value="betao2">       Betão II                            </option> -->
+                            </optgroup>
+                            <optgroup id="2s" disabled  value="2oSem" label="2º Semestre">
+
                             </optgroup>
                           </select>
+
 
                           <div style="width: 100%" class="mdl-textfield mdl-js-textfield">
                             <input class="mdl-textfield__input" placeholder="Nomear o ficheiro" type="text" id="filenameInput">
@@ -252,11 +275,11 @@
   <script type="text/javascript" src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
   <script type="text/javascript" src="https://cdn.datatables.net/1.10.15/js/dataTables.material.min.js"></script>
   <script type="text/javascript" src="../js/jquery.alphanum.js"></script>
-  <script type="text/javascript" src="../js/tablescript.js"></script>
+  <script type="text/javascript" src="tablescript.js"></script>
   <script type="text/javascript" src="anosSupl.js"></script>
-  <script type="text/javascript" src="../js/anos.js"></script>
+  <script type="text/javascript" src="anos.js"></script>
   <script type="text/javascript" src="../js/timedUpdate.js"></script>
-  <script type="text/javascript" src="../js/upload.js"></script>
+  <script type="text/javascript" src="upload.js"></script>
 
 
 

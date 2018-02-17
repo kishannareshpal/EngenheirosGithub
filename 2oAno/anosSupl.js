@@ -1,5 +1,5 @@
-var cadeiras1oSemNAMES = ["Cartografia e Topografia", "Desenho de Arq. e Construção", "Electrotecnia Geral", "Mecânica de Construção", "Mecánica de Solos", "Prob. e Métodos Estatísticos", "Química Geral", "Educação Estética e Artística"]
-var cadeiras1oSemIDS = ["cartotopografia", "desenhoarqui", "electrotec", "mecanicaconst", "mecanicasolos", "estatistica", "quimica", "estetica"]
+var cadeiras1oSemNAMES = ["Cartografia e Topografia", "Desenho de Arq. e Construção", "Electrotecnia Geral", "Mecânica de Construção", "Mecánica de Solos I", "Prob. e Métodos Estatísticos", "Química Geral", "TT: Educação Estética e Artística"]
+var cadeiras1oSemIDS = ["cartotopografia", "desenhoarqui", "electrotec", "mecanicaconst", "mecanicasolos1", "estatistica", "quimica", "estetica"]
 
-var cadeiras2oSemNAMES = ["Práticas de campo e de laboratório", "Desenho Assistido por Computador", "Hidráulica Geral I", "Resistência dos Materiais", "Mecánica de Solos 2", "Análise e Métodos Numéricos Aplicados", "Materiais de Construção"]
-var cadeiras2oSemIDS = ["pcl", "algecadbra", "hg1", "gdescritiva", "resistencia", "mecanicasolos2", "metodos", "materiaisconst"]
+var cadeiras2oSemNAMES = ["Análise e Métodos Numéricos Aplicados", "Desenho Assistido por Computador (CAD)", "Hidráulica Geral I", "Materiais de Construção", "Mecánica de Solos II", "Práticas de Campo e de Laboratório", "Resistência dos Materiais"]
+var cadeiras2oSemIDS = ["metodos", "cad", "hg1", "materiaisconst", "mecanicasolos2", "pcl", "resistencia"]

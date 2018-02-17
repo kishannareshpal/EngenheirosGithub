@@ -1,18 +1,22 @@
 var promise;
 
-document.onreadystatechange = function () {
-  var state = document.readyState;
-
-  if (state == 'complete') {
-      setTimeout(function(){
-        // $("#loading").addClass("hidden");
-        document.getElementById("loaded__").setAttribute("hidden", "");
-        document.getElementById("main__").removeAttribute("hidden", "");
-        document.getElementById('body').classList.remove("mdl-color--grey-900");
-        document.getElementById('body').classList.add("mdl-color--grey-200");
-      },1300);
-  }
-};
+// document.onreadystatechange = function () {
+//   var state = document.readyState;
+//
+//   if (state == 'complete') {
+//       setTimeout(function(){
+//         // $("#loading").addClass("hidden");
+//         document.getElementById("loaded__").setAttribute("hidden", "");
+//         document.getElementById("main__").removeAttribute("hidden", "");
+//         document.getElementById('body').classList.remove("mdl-color--grey-900");
+//         document.getElementById('body').classList.add("mdl-color--grey-200");
+//       },1);
+//   }
+// };
+document.getElementById("loaded__").setAttribute("hidden", "");
+document.getElementById("main__").removeAttribute("hidden", "");
+document.getElementById('body').classList.remove("mdl-color--grey-900");
+document.getElementById('body').classList.add("mdl-color--grey-200");
 
 if(document.cookie.indexOf("signedin=yes") >= 0){
   document.getElementById('loadingdoc_').removeAttribute("hidden", "");
@@ -75,9 +79,10 @@ firebase.auth().onAuthStateChanged(function(firebaseUser) {
   } else {
     //If the user is NOT logged in do this
     document.cookie = "signedin=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+    document.cookie = "signedin=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/4oAno;";
+
     document.getElementById('sair').setAttribute("hidden", "");
     document.getElementById('uploadButton').setAttribute("hidden", "");
-
   }
 });
 
@@ -119,7 +124,7 @@ function askEstudanteCode(){
 $( "#sair" ).click(function() {
   if(confirm( "Deseja sair do Modo Docente?" )){
     firebase.auth().signOut();
-    document.cookie = "signedin=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+    document.cookie = "signedin=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/4oAno;";
     window.location.reload(1);
   }else {
     return null;
@@ -127,22 +132,3 @@ $( "#sair" ).click(function() {
 });
 
 var cadeirasButton = document.getElementById('cadeirasButton');
-
-function changed(){
-  var semestreSelect = document.getElementById('semestreSelect').value;
-
-  if (semestreSelect == "1oSem") {
-    cadeirasButton.innerHTML="";
-    for (var n = 0, i = 0; n < cadeiras1oSemNAMES.length, i < cadeiras1oSemIDS.length; n++, i++) {
-        cadeirasButton.insertAdjacentHTML('beforeEnd', "<button style='width: 100%; cursor: pointer' name='" + cadeiras1oSemIDS[i] + "' type='button' class='btn btn-mdb'>" + cadeiras1oSemNAMES[n] + "</button>");
-    }
-
-  } else if (semestreSelect == "2oSem") {
-    cadeirasButton.innerHTML="";
-    for (var n = 0, i = 0; n < cadeiras2oSemNAMES.length, i < cadeiras2oSemIDS.length; n++, i++) {
-        cadeirasButton.insertAdjacentHTML('beforeEnd', "<button style='width: 100%; cursor: pointer' name='" + cadeiras2oSemIDS[i] + "' type='button' class='btn btn-mdb'>" + cadeiras2oSemNAMES[n] + "</button>");
-    }
-  }
-}
-
-changed();

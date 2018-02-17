@@ -53,17 +53,17 @@
     <div class="ui vertical masthead center aligned segment">
 
       <div class="ui text container">
-        <img draggable="false" class="centerBlock" src="../images/android-desktop.png" style="height: 150px; width: 150px; margin-top: 5em" alt="logo.png">
+        <img draggable="false" class="centerBlock mdl-shadow--16dp" src="../images/android-desktop.png" style="height: 150px; width: 150px; margin-top: 5em; border-radius: 150px;" alt="logo.png">
         <h1 class="ui inverted header" style="100%">
           <strong id="tt1" title="Este é o nosso portal!" style="cursor: default">Ola Eng.</strong>
         </h1>
         <h2 class="mdl-color-text--grey-400" style="margin-bottom: 0.5px; cursor: default">Seja bem vindo(a)</h2>
         <p class="mdl-color-text--grey-600" style="cursor: default">*Por favor Seleccione o ano.</p>
         <div class="ui">
-          <a href="/1oAno" class="btn btn-blue-grey">I<br>ano</a>
-          <a href="/2oAno" class="btn btn-blue-grey">II<br>ano</a>
-          <a href="/3oAno" class="btn btn-blue-grey">III<br>ano</a>
-          <a href="/4oAno" class="btn btn-blue-grey">IV<br>ano</a>
+          <a style="border-radius: 7px" href="/1oAno" class="btn btn-success">I<br>ano</a>
+          <a style="border-radius: 7px" href="/2oAno" class="btn btn-success">II<br>ano</a>
+          <a style="border-radius: 7px" href="/3oAno" class="btn btn-success">III<br>ano</a>
+          <a style="border-radius: 7px" href="/4oAno" class="btn btn-success">IV<br>ano</a>
         </div>
       </div>
     </div>
@@ -106,7 +106,12 @@
         inertia: true
       });
 
-      document.getElementById('copyright').innerHTML='<i class="copyright icon"></i>' + (new Date()).getFullYear().toString() + '. Feito com <i style="font-size: 12px; color: #f25151" class="heart icon"></i>por<strong style="cursor: pointer;" title="Social"> Kishan Nareshpal</strong>.<br>Para estudantes da Engenharia Civil da UP-Maxixe<br><a href="#home" style="color: #ffffff">www.upengenheiros.com</a><br><a href="#?version=3.3.7" style="color: #ffffff"><i>v.3.3.7</i></a>'
+      var appVersion_ = "3.4.0"
+      document.getElementById('copyright')
+        .innerHTML='<i class="copyright icon"></i>' + (new Date()).getFullYear().toString() + '. Feito com <i style="font-size: 12px; color: #f25151" class="heart icon"></i>por<strong style="cursor: pointer;" title="Social"> Kishan Nareshpal</strong>.<br>\
+                    Para colegas do curso de Eng. Civil da UP-Maxixe<br>\
+                    <a href="#home" style="color: #ffffff">www.upengenheiros.com</a><br>\
+                    <a href="#?version=' + appVersion_ + '" style="color: #ffffff"><i>v.' + appVersion_ + '</i></a>';
 
   </script>
 
