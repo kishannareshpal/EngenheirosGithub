@@ -59,6 +59,7 @@ var tes1;
       // 2nd: GET THE key & values FROM REALTIME DATABSE AND POPULATE THE TABLE;
       // MODEL:  var dataset = [snap.child("name").val(), snap.val().Name];
       rootRef.on("value", function(datasnap) {
+        table.clear().draw();
         if(!datasnap.exists()){
           dataSet = ["Nenhum Ficheiro Encontrado", ""];
           table.rows.add([dataSet]).draw();
