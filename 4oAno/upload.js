@@ -40,9 +40,7 @@ function seeUpload(){
     document.getElementById('up_troncoSelect').value = cookieTronco;
     document.getElementById('troncoSelect').value = cookieTronco;
   }
-
   tr();
-
 }
 
 if(document.cookie.indexOf("tronco=") >= 0){

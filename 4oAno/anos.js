@@ -1,22 +1,19 @@
 var promise;
 
-// document.onreadystatechange = function () {
-//   var state = document.readyState;
-//
-//   if (state == 'complete') {
-//       setTimeout(function(){
-//         // $("#loading").addClass("hidden");
-//         document.getElementById("loaded__").setAttribute("hidden", "");
-//         document.getElementById("main__").removeAttribute("hidden", "");
-//         document.getElementById('body').classList.remove("mdl-color--grey-900");
-//         document.getElementById('body').classList.add("mdl-color--grey-200");
-//       },1);
-//   }
-// };
-document.getElementById("loaded__").setAttribute("hidden", "");
-document.getElementById("main__").removeAttribute("hidden", "");
-document.getElementById('body').classList.remove("mdl-color--grey-900");
-document.getElementById('body').classList.add("mdl-color--grey-200");
+document.onreadystatechange = function () {
+  var state = document.readyState;
+
+  if (state == 'complete') {
+      setTimeout(function(){
+        // $("#loading").addClass("hidden");
+        document.getElementById("loaded__").setAttribute("hidden", "");
+        document.getElementById("main__").removeAttribute("hidden", "");
+        document.getElementById('body').classList.remove("mdl-color--grey-900");
+        document.getElementById('body').classList.add("mdl-color--grey-200");
+      },1500);
+  }
+};
+
 
 if(document.cookie.indexOf("signedin=yes") >= 0){
   document.getElementById('loadingdoc_').removeAttribute("hidden", "");
