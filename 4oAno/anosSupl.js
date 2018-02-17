@@ -1,7 +1,3 @@
-var cadeiras2oSemIDS_obras = ["grh", "hidrurbana", "irrigacaodrenagem", "ofm", "praticas", "projecto"]
-var cadeiras1oSemIDS_edificios = ["betao2", "edificacoes", "estruturas", "gqc", "instalacoes1", "antropologia"]
-var cadeiras1oSemNAMES_obras = ["Betão II", "Engenharia de Recursos Hídricos", "Gestão da Qualidade na Construção", "Hidrogeologia", "Hidrometria", "Hidroquímica", "TT: Antropologia Cultural de Moçambique"]
-var cadeiras2oSemNAMES_obras = ["Gestão de Recursos Hídricos", "Hidráulica Urbana", "Irrigação e Drenagem", "Obras Fluviais e Marítimas", "Práticas de Campo, Laboratório e Obras", "Projecto em Construção Hidráulicas"]
 var cadeirasObject = {
   "1oSem": {
     "edificios": {
