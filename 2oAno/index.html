@@ -152,7 +152,7 @@
                       <p style="text-align: center">Faça aqui o upload do ficheiro.</p>
 
                       <div class="mdl-grid" style="width: 100%;">
-                          <input type="file" id="fileUploadInput"/>
+                          <input onchange="fileSelected()" type="file" id="fileUploadInput"/>
 
                           <select style="width: 100%; margin-top: 20px; margin-bottom: 10px" onchange="disc(event)" id="disciplinasSelect">
                               <option value="">                Selecione uma Cadeira         </option>
