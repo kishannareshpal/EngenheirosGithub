@@ -46,8 +46,6 @@ function tr(e){
 
 
 var tronco__;
-
-
 function tronco(){
   tronco__ = document.getElementById('troncoSelect').value;
   document.cookie = "tronco=" + tronco__ + "; expires=Thu, 25 Dec 2025 12:00:00 UTC; path=/4oAno";
@@ -58,13 +56,9 @@ function tronco(){
 function changed(){
   var currSemestre = document.getElementById('semestreSelect').value;
   tronco__ = document.getElementById('troncoSelect').value;
-
 //SIMPLIFIED VERSION
   cadeirasButton.innerHTML="";
   for (var n=0; n < cadeirasObject[currSemestre][tronco__]["id"].length; n++){
     cadeirasButton.insertAdjacentHTML('beforeEnd', "<button style='width: 100%; cursor: pointer' name='" + cadeirasObject[currSemestre][tronco__]["id"][n] + "' type='button' class='btn btn-mdb'>" + cadeirasObject[currSemestre][tronco__]["names"][n] + "</button>");
   }
 }
-
-// tronco();
-changed();

@@ -10,6 +10,7 @@ document.onreadystatechange = function () {
         document.getElementById("main__").removeAttribute("hidden", "");
         document.getElementById('body').classList.remove("mdl-color--grey-900");
         document.getElementById('body').classList.add("mdl-color--grey-200");
+        changed();
       },1500);
   }
 };
@@ -70,6 +71,7 @@ firebase.auth().onAuthStateChanged(function(firebaseUser) {
       document.getElementById('ctable').style.pointerEvents = null;
     } else {
       alert("Usuário não autorizado.");
+      document.getElementById('loadingdoc_').removeAttribute("hidden", "");
       firebase.auth().signOut();
     }
 

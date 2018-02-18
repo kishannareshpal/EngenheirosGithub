@@ -4,8 +4,13 @@ var semestreSelect = document.getElementById('semestreSelect');
 var currentMonth = (new Date()).getMonth();
 var currentYear = (new Date()).getFullYear();
 
+for (var y = 0; y < (currentYear-yearSelect.children[0].value)+1; y++){
+  yearSelect.children[y].removeAttribute("disabled");
+}
+
 // Defaults the year to current year
 yearSelect.value = currentYear;
+
 
 // Enable 2o Semestre.
 if(currentMonth > 5){ // where 5 means Junho. 5 'Cause 2o Semestre starts at July or up.
