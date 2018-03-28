@@ -54,27 +54,31 @@ var tes1;
       rootRef = firebase.database().ref( "/" + actualPageYear + "/" + selectedYear + "/" + selectedSemestre + "/" + getNameButton + "/");
       // 1st: Clear all possible values first.
       var dataSet = [];
-      table.clear().draw();
+      // table.clear().draw();
 
       // 2nd: GET THE key & values FROM REALTIME DATABSE AND POPULATE THE TABLE;
       // MODEL:  var dataset = [snap.child("name").val(), snap.val().Name];
+      table.clear().draw();
       rootRef.on("value", function(datasnap) {
-        table.clear().draw();
+        // table.clear().draw();
         if(!datasnap.exists()){
           dataSet = ["Nenhum Ficheiro Encontrado", ""];
           table.rows.add([dataSet]).draw();
+        } else {
+          rootRef.on("child_added", function(snap) {
+            dataSet = [snap.key, snap.val()];
+            table.rows.add([dataSet]).draw();
+            // check if data exists
+            // if(snap.val() == "")
+            document.querySelector('#table_wrapper > div:nth-child(1)').setAttribute("hidden", "");
+            document.querySelector('#table_wrapper > div:nth-child(3)').removeAttribute("hidden", "");
+          });
         }
-        console.log("me");
       });
 
-      rootRef.on("child_added", function(snap) {
-        dataSet = [snap.key, snap.val()];
-        table.rows.add([dataSet]).draw();
-        // check if data exists
-        // if(snap.val() == "")
-        document.querySelector('#table_wrapper > div:nth-child(1)').setAttribute("hidden", "");
-        document.querySelector('#table_wrapper > div:nth-child(3)').removeAttribute("hidden", "");
-      });
+
+
+
 
 
   });
