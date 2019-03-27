@@ -1,0 +1,505 @@
+/**
+ * Copyright 2017 Google Inc. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+ .middler {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+ .loader {
+   display: inline-block;
+   width: 30px;
+   height: 30px;
+   position: relative;
+   border: 4px solid #Fff;
+   top: 50%;
+   color: white;
+   animation: loader 2s infinite ease;
+ }
+
+ .loader-inner {
+   vertical-align: top;
+   display: inline-block;
+   width: 100%;
+   background-color: #fff;
+   animation: loader-inner 2s infinite ease-in;
+ }
+
+ @keyframes loader {
+   0% {
+     transform: rotate(0deg);
+   }
+
+   25% {
+     transform: rotate(180deg);
+   }
+
+   50% {
+     transform: rotate(180deg);
+   }
+
+   75% {
+     transform: rotate(360deg);
+   }
+
+   100% {
+     transform: rotate(360deg);
+   }
+ }
+
+ @keyframes loader-inner {
+   0% {
+     height: 0%;
+   }
+
+   25% {
+     height: 0%;
+   }
+
+   50% {
+     height: 100%;
+   }
+
+   75% {
+     height: 100%;
+   }
+
+   100% {
+     height: 0%;
+   }
+ }
+
+ /*--------------------------------------------------------*/
+ /*------------------------CUSTOM--------------------------*/
+ /*--------------------------------------------------------*/
+ .spinner {
+  /* margin: 100px auto 0; */
+  width: 70px;
+  text-align: center;
+}
+
+.spinner > div {
+  width: 6px;
+  height: 6px;
+  background-color: #ffffff;
+
+  border-radius: 100%;
+  display: inline-block;
+  -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+  animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+}
+
+.spinner .bounce1 {
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
+}
+
+.spinner .bounce2 {
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s;
+}
+
+@-webkit-keyframes sk-bouncedelay {
+  0%, 80%, 100% { -webkit-transform: scale(0) }
+  40% { -webkit-transform: scale(1.0) }
+}
+
+@keyframes sk-bouncedelay {
+  0%, 80%, 100% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  } 40% {
+    -webkit-transform: scale(1.0);
+    transform: scale(1.0);
+  }
+}
+
+
+
+
+
+.backdrop {
+  background: url("../images/bg-n.png") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.hidden.menu {
+  display: none;
+}
+
+.masthead.segment {
+  min-height: 1000px;
+  padding: 1em 0em;
+}
+.masthead .logo.item img {
+  margin-right: 1em;
+}
+.masthead .ui.menu .ui.button {
+  margin-left: 0.5em;
+}
+
+/* OLA ENG. TEXT HEADER SIZE AND MARGINS */
+.masthead h1.ui.header {
+  margin-top: 0em;
+  margin-bottom: 0em;
+  font-size: 64px;
+  font-weight: normal;
+}
+
+.masthead h2 {
+  font-size: 1.5em;
+  font-weight: normal;
+}
+
+.ui.vertical.stripe {
+  padding: 8em 0em;
+}
+.ui.vertical.stripe h3 {
+  font-size: 1em;
+}
+.ui.vertical.stripe .button + h3,
+.ui.vertical.stripe p + h3 {
+  margin-top: 3em;
+}
+.ui.vertical.stripe .floated.image {
+  clear: both;
+}
+.ui.vertical.stripe p {
+  font-size: 1.33em;
+}
+.ui.vertical.stripe .horizontal.divider {
+  margin: 3em 0em;
+}
+
+.quote.stripe.segment {
+  padding: 0em;
+}
+.quote.stripe.segment .grid .column {
+  padding-top: 5em;
+  padding-bottom: 5em;
+}
+
+.footer.segment {
+  padding: 10em 0em;
+}
+
+.secondary.pointing.menu .toc.item {
+  display: none;
+}
+
+.bg {
+  /* background-color: grey; */
+  background: rgb(34, 34, 34);
+  background: url("/resources/images/bg-n.png") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.centerBlock {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+::selection {
+  background: white; /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+  background: white; /* Gecko Browsers */
+}
+
+/*--------------------------------------------------------*/
+/*---------------------END OF CUSTOM----------------------*/
+/*--------------------------------------------------------*/
+
+html, body {
+  font-family: 'Roboto', 'Helvetica', sans-serif;
+}
+
+.mdl-card__supporting-text {
+  width: auto;
+  background-color: #242424;
+}
+
+.mdl-card__supporting-text h6 {
+  padding: 0
+}
+
+#table thead,
+#table th {text-align: center;}
+
+#table tbody,
+#table td {text-align: justify;}
+
+
+.ldb-label {
+    color: #000000;
+    font-family: 'Roboto', 'Helvetica', sans-serif;
+    font-size: 1em;
+}
+
+.mdl-spinner--single-color{
+}
+
+.center2 {
+  width: 20px;
+  height: 20px
+}
+
+.mdl-button--file {
+  input {
+    cursor: pointer;
+    height: 100%;
+    right: 0;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    width: 300px;
+    z-index: 4;
+  }
+}
+
+.mdl-textfield--file {
+  .mdl-textfield__input {
+    box-sizing: border-box;
+    width: calc(100% - 32px);
+  }
+  .mdl-button--file {
+    right: 0;
+  }
+}
+
+
+/*Custom*/
+/*MAKE THE WIDTH 100%, ou seja, OCUPPIE ALL OF THE SPACE*/
+.fluid2 {
+  width: 100%;
+}
+
+
+label.input-custom-file input[type=file] {
+  display: none;
+}
+
+.k-card-square.mdl-card {
+  width: 320px;
+  height: 320px;
+}
+
+/*Square card*/
+.k-card-square.mdl-card {
+  width: 100%;
+  height: 525px;
+}
+/*card color*/
+.k-card-square > .mdl-card__title {
+  color: white;
+  background-color: #292929;
+}
+
+/*LOGO ON THE NAVIGATION BAR MAKE IT ROUND AND SMALL*/
+.k-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 24px;
+}
+
+/* HAMBURGER BUTTON COLOR ON NAVIGATION WHEN ON MOBILE */
+.k-layout .mdl-layout__header .mdl-layout__drawer-button {
+  /*color: rgba(0, 0, 0, 0.54);*/
+  color: white;
+}
+
+.mdl-layout__drawer .avatar {
+  margin-bottom: 16px;
+}
+.k-drawer {
+  border: none;
+}
+
+/* iOS Safari specific workaround */
+.k-drawer .mdl-menu__container {
+  z-index: -1;
+}
+.k-drawer .k-navigation {
+  z-index: -2;
+}
+
+/* END iOS Safari specific workaround */
+.k-drawer .mdl-menu .mdl-menu__item {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.k-drawer-header {
+  box-sizing: border-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding: 16px;
+  height: 151px;
+}
+
+.k-avatar-dropdown {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+.k-navigation {
+  -webkit-flex-grow: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+.k-layout .k-navigation .mdl-navigation__link {
+  display: -webkit-flex !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: rgba(255, 255, 255, 0.56);
+  font-weight: 500;
+}
+
+
+
+.k-layout .k-navigation .mdl-navigation__link:hover {
+  background-color: rgb(47, 47, 47);
+  color: white;
+}
+.k-navigation .mdl-navigation__link .material-icons {
+  font-size: 24px;
+  color: rgba(255, 255, 255, 0.56);
+  margin-right: 32px;
+}
+
+.k-content {
+  max-width: 1080px;
+}
+
+.k-charts {
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.k-graphs {
+  padding: 16px 32px;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-align-items: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+}
+
+.k-cards {
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-align-content: flex-start;
+      -ms-flex-line-pack: start;
+          align-content: flex-start;
+}
+.k-cards .k-separator {
+  height: 32px;
+}
+.k-cards .mdl-card__title.mdl-card__title {
+  color: white;
+  font-size: 24px;
+  font-weight: 400;
+}
+.k-cards ul {
+  padding: 0;
+}
+.k-cards h3 {
+  font-size: 1em;
+}
+/*dog color*/
+.k-updates .mdl-card__title {
+  min-height: 200px;
+  background-color: white;
+  background-position: 90% 100%;
+  background-repeat: no-repeat;
+}
+.k-cards .mdl-card__actions a {
+  color: #00BCD4;
+  text-decoration: none;
+}
+
+.k-options h3 {
+  margin: 0;
+}
+.k-options .mdl-checkbox__box-outline {
+  border-color: rgba(255, 255, 255, 0.89);
+}
+.k-options ul {
+  margin: 0;
+  list-style-type: none;
+}
+.k-options li {
+  margin: 4px 0;
+}
+.k-options .material-icons {
+  color: rgba(255, 255, 255, 0.89);
+}
+.k-options .mdl-card__actions {
+  height: 64px;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  box-sizing: border-box;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}

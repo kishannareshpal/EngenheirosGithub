@@ -13,36 +13,36 @@
 
     <!-- Add to homescreen for Chrome on Android -->
     <meta name="mobile-web-app-capable" content="yes">
-    <link rel="icon" sizes="192x192" href="images/android-desktop.png">
+    <link rel="icon" sizes="192x192" href="resources/images/android-desktop.png">
 
     <!-- Add to homescreen for Safari on iOS -->
     <meta name="apple-mobile-web-app-capable" content="yes">
     <!-- Depprecated -->
     <!-- <meta name="apple-mobile-web-app-status-bar-style" content="black"> -->
     <meta name="apple-mobile-web-app-title" content="Engenheiros">
-    <link rel="apple-touch-icon-precomposed" href="images/ios-desktop.png">
+    <link rel="apple-touch-icon-precomposed" href="resources/images/ios-desktop.png">
 
 
     <!-- IE Meta -->
     <meta name="application-name" content="UP Engenheiros"/>
     <meta name="msapplication-tooltip" content="Engenheiros - Base de Dados"/>
       <!-- Tile icon for Win8 (144x144 + tile color) -->
-      <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
+      <meta name="msapplication-TileImage" content="resources/images/touch/ms-touch-icon-144x144-precomposed.png">
       <meta name="msapplication-TileColor" content="#3372DF">
 
 
-    <link rel="shortcut icon" href="images/favicon.png">
+    <link rel="shortcut icon" href="/resources/images/favicon.png">
 
     <!-- Site Properties -->
     <title>UP Engenheiros</title>
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.css"/>
+    <link rel="stylesheet" type="text/css" href="resources/css/semantic.css"/>
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.teal-red.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.3.2/css/mdb.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/izitoast/1.1.5/css/iziToast.min.css">
-    <link rel="stylesheet" href="/css/styles.css">
-    <link rel="stylesheet" href="/tippyjs-1.2.1/dist/tippy.css">
+    <link rel="stylesheet" href="resources/css/material.teal-red.min.css">
+    <link rel="stylesheet" href="resources/css/bootstrap.min.css">
+    <link rel="stylesheet" href="resources/css/mdb.min.css">
+    <link rel="stylesheet" href="resources/css/iziToast.min.css">
+    <link rel="stylesheet" href="resources/css/app/styles.css">
+    <link rel="stylesheet" href="resources/css/tippy.css">
 
   </head>
   <body class="bg">
@@ -53,8 +53,8 @@
     <div class="ui vertical masthead center aligned segment">
 
       <div class="ui text container">
-        <img draggable="false" class="centerBlock mdl-shadow--16dp" src="../images/android-desktop.png" style="height: 150px; width: 150px; margin-top: 5em; border-radius: 150px;" alt="logo.png">
-        <h1 class="ui inverted header" style="100%">
+        <img draggable="false" class="centerBlock mdl-shadow--16dp" src="../resources/images/android-desktop.png" style="height: 150px; width: 150px; margin-top: 5em; border-radius: 150px;" alt="logo.png">
+        <h1 class="ui inverted header" style="width: 100%">
           <strong id="tt1" title="Este é o nosso portal!" style="cursor: default">Ola Eng.</strong>
         </h1>
         <h2 class="mdl-color-text--grey-400" style="margin-bottom: 0.5px; cursor: default">Seja bem vindo(a)</h2>
@@ -85,16 +85,15 @@
   </div>
 
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.js"></script>
-  <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/4.3.1/firebase.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/izitoast/1.1.5/js/iziToast.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.3.2/js/mdb.min.js"></script>
-  <script src="https://use.fontawesome.com/8666852d21.js"></script>
-  <script src="/tippyjs-1.2.1/dist/tippy.js"></script>
+  <script src="resources/js/jquery.js"></script>
+  <script src="resources/js/semantic.min.js"></script>
+  <script defer src="resources/js/material.min.js"></script>
+  <script src="resources/js/iziToast.min.js"></script>
+  <script src="resources/js/popper.min.js"></script>
+  <script src="resources/js/bootstrap.min.js"></script>
+  <script src="resources/js/mdb.min.js"></script>
+  <script src="resources/js/8666852d21.js"></script>
+  <script src="resources/js/tippy.min.js"></script>
 
 <!-- Quick Tooltip -->
   <script>
